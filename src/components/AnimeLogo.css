@@ -1,0 +1,28 @@
+@media (prefers-reduced-motion: no-preference) {
+  #inside {
+    animation: inside-spin infinite 20s linear;
+    transform-origin: center;
+
+  }
+}
+
+@keyframes inside-spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+svg {
+  padding: 1px 1px;
+  width: 80px;
+  height: 80px;
+  margin-right: 12px; 
+  margin-left: 5px;
+  vertical-align: middle;
+  border-style: none;
+ 
+}
+

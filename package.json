@@ -1,0 +1,53 @@
+{
+  "name": "8ag",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@greenlock/manager": "^3.1.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@tippyjs/react": "^4.2.0",
+    "acme-http-01-standalone": "^3.0.5",
+    "emailjs-com": "^2.6.4",
+    "google-map-react": "^2.1.9",
+    "greenlock": "^4.0.4",
+    "greenlock-store-fs": "^3.2.2",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-dotenv": "^0.1.3",
+    "react-google-maps-loader": "^4.3.0",
+    "react-hook-form": "^6.14.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.0",
+    "react-tooltip": "^4.2.13",
+    "styled-components": "^5.2.1",
+    "web-vitals": "^0.2.4",
+    "yup": "^0.32.8"
+  },
+  "scripts": {
+    "start": "HTTS=true SSL_CRT_FILE=./.cert/cert.pem SSL_KEY_FILE=./.cert/key.pem react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
