@@ -4,14 +4,14 @@ import Marker from '../components/Marker';
 import mapStyles from './mapStyles';
 
 const GoogleMap = (props: any) => {
-  const getMapOptions = (maps: any) => {
-    return {
-      disableDefaultUI: true,
-      mapTypeControl: true,
-      streetViewControl: true,
-      styles: [{ featureType: 'poi', elementType: 'labels', stylers: [{ visibility: 'on' }] }],
-    };
-  };
+  // const getMapOptions = (maps: any) => {
+  //   return {
+  //     disableDefaultUI: true,
+  //     mapTypeControl: true,
+  //     streetViewControl: true,
+  //     styles: [{ featureType: 'poi', elementType: 'labels', stylers: [{ visibility: 'on' }] }],
+  //   };
+  // };
 
 
     const [center, setCenter] = useState({ lat: 47.51407, lng: 19.03726 });

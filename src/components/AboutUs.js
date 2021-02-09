@@ -45,7 +45,7 @@ const AboutUs = () => {
           <hr />
           <Row>
             <Col md={4}>
-              <Card className="cardHover" className="CardsOnMobil">
+              <Card className="cardHover">
                 <Card.Header><b>Alapítás éve</b></Card.Header>
                   <ListGroup variant="flush">
                     <ListGroup.Item>2015.</ListGroup.Item>
@@ -53,7 +53,7 @@ const AboutUs = () => {
               </Card>
             </Col>
             <Col md={4}>
-            <Card className="cardHover" className="CardsOnMobil">
+            <Card className="cardHover">
                 <Card.Header><b>Adószám:</b></Card.Header>
                   <ListGroup variant="flush">
                     <ListGroup.Item>18734373-1-41</ListGroup.Item>
@@ -61,7 +61,7 @@ const AboutUs = () => {
               </Card>
             </Col>
             <Col md={4}>
-              <Card className="cardHover" className="CardsOnMobil">
+              <Card className="cardHover">
                   <Card.Header><b>Nyilvántartási szám</b></Card.Header>
                     <ListGroup variant="flush">
                       <ListGroup.Item>01-09-879437</ListGroup.Item>
@@ -71,7 +71,7 @@ const AboutUs = () => {
           </Row>
           <Row className="justify-content-md-center">
             <Col md={4}>
-            <Card className="cardHover" className="CardsOnMobil">
+            <Card className="cardHover">
                   <Card.Header><b>Székhely</b></Card.Header>
                     <ListGroup variant="flush">
                       <ListGroup.Item>1132. Budapest <br/> Visegrádi u. 80/A 8/2.</ListGroup.Item>
@@ -79,7 +79,7 @@ const AboutUs = () => {
                 </Card>
             </Col>
             <Col md={4}>
-              <Card className="cardHover" className="CardsOnMobil">
+              <Card className="cardHover">
                 <Card.Header><b>IBAN / SWIFT</b></Card.Header>
                   <ListGroup variant="flush">
                     <ListGroup.Item>HU81-10103104-54928200-01004009<br/>BUDAHUHB</ListGroup.Item>
@@ -87,7 +87,7 @@ const AboutUs = () => {
               </Card>
             </Col>
             <Col md={4}>
-            <Card className="cardHover" className="CardsOnMobil">
+            <Card className="cardHover">
                   <Card.Header><b>Bankszámlaszám</b></Card.Header>
                     <ListGroup variant="flush">
                       <ListGroup.Item>Budapest Bank<br/>10103104-54928200-01004009</ListGroup.Item>
@@ -97,7 +97,7 @@ const AboutUs = () => {
           </Row>
           <Row className="justify-content-md-center">
             <Col md={4}>
-              <Card className="cardHover" className="CardsOnMobil">
+              <Card className="cardHover">
                 <Card.Header><b>A kuratórium elnöke</b></Card.Header>
                   <ListGroup variant="flush">
                     <ListGroup.Item><Link href="https://bandhaworks.hu/pages/team/team-member/szalai-istvan/" target="_blank">Szalai István</Link><br/>astanga jóga gyakorló/oktató<br/><Link href="https://bandhaworks.hu" target="_blank">bandhaworks.hu</Link></ListGroup.Item>
@@ -106,7 +106,7 @@ const AboutUs = () => {
               </Card>
             </Col>
             <Col md={4}>
-              <Card className="cardHover" className="CardsOnMobil">
+              <Card className="cardHover">
                   <Card.Header><b>Kuratóriumi tag</b></Card.Header>
                     <ListGroup variant="flush">
                       <ListGroup.Item>Krébesz Andrea<br/>astanga jóga gyakorló/oktató<br/><Link href="https://bandhaworks.hu" target="_blank">bandhaworks.hu</Link></ListGroup.Item>
@@ -114,7 +114,7 @@ const AboutUs = () => {
                 </Card>
             </Col>
             <Col md={4}>
-              <Card className="cardHover" className="CardsOnMobil">
+              <Card className="cardHover">
                   <Card.Header><b>Kuratóriumi tag</b></Card.Header>
                     <ListGroup variant="flush">
                       <ListGroup.Item>Bimba András Imre<br/>astanga jóga gyakorló/oktató<br/><Link href="https://bandhaworks.hu" target="_blank">bandhaworks.hu</Link></ListGroup.Item>
