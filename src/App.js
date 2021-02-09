@@ -14,7 +14,6 @@ import Projekt from './pages/Projekt';
 import Projektjeink from './pages/Projektjeink';
 import Uvegzseb from './pages/Uvegzseb';
 
-
 const App=()=> {
   return (
     <div className="App">
