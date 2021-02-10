@@ -60,7 +60,6 @@
   #BrandNameFont {
     display: none !important;
   }
-
 }
 
 #nyolcag {
@@ -70,6 +69,9 @@
 @media screen and (max-width: 460px) {
   #nyolcag{
     display: inline;
+    font-size: 1.1em !important;
+    color: black !important;
+    font-family: monospace;
   }
 }
 
