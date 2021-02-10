@@ -78,7 +78,7 @@ const Footer = () => {
         <Col>
           <H6Tag>HÍRLEVÉL</H6Tag>
             <form className="contact-form" onSubmit={sendEmail}>
-              <input type="email" name="user_email" id="emailstyle" placeholder="E-mail címed"></input>
+              <input type="email" name="user_email" id="emailstyle" placeholder="E-mail címed" required></input>
               <input type="submit" value="Küldés" id="buttonstyle"></input>
             </form>
         </Col>

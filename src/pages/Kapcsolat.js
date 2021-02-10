@@ -46,11 +46,11 @@ export default function Kapcsolat() {
         </Row>
         <Row>
           <Col sm={4}>
-            <input type="text" name="user_name" placeholder="Feladó neve*" className="InputMassage"/>
-            <input type="email" name="user_email" placeholder="E-mail cím*" className="InputMassage1"/>
+            <input type="text" name="user_name" placeholder="Feladó neve*" className="InputMassage" required />
+            <input type="email" name="user_email" placeholder="E-mail cím*" className="InputMassage1" required />
           </Col>
           <Col sm={8}>
-            <textarea name="message" placeholder="Üzenet*" className="TextAreaStyle" />
+            <textarea name="message" placeholder="Üzenet*" className="TextAreaStyle" required />
           </Col>
           <Col>
             <ButtonInputStyle type="submit" value="Küldés"></ButtonInputStyle>
