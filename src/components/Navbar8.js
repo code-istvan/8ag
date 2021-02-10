@@ -17,7 +17,7 @@ const Navbar8 = () => {
           alt=''
         /> */}
       </Navbar.Brand>
-      <Navbar.Brand id="BrandNameFont">NYOLCÁGÚ JÓGA ALAPÍTVÁNY</Navbar.Brand>
+      <Navbar.Brand id="BrandNameFont">NYOLCÁGÚ JÓGA ALAPÍTVÁNY</Navbar.Brand><Navbar.Brand id="nyolcag">NYOLCÁG</Navbar.Brand>
       <Navbar.Toggle aria-controls='responsive-navbar-nav' />
       <Navbar.Collapse id='responsive-navbar-nav'>
         <Nav className='ml-auto'>

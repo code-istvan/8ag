@@ -18,7 +18,6 @@
 #BrandNameFont {
   font-family: monospace;
   font-size: 1.2em !important;
-
 }
 
 .ml-auto a{
@@ -50,19 +49,28 @@
   /* border-bottom: 2px solid rgba(16, 15, 15, 0.81); */
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 610px) {
   #BrandNameFont {
     font-size: 1em !important;
   }
 
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 460px) {
   #BrandNameFont {
     display: none !important;
   }
 
 }
 
+#nyolcag {
+  display: none;
+}
+
+@media screen and (max-width: 460px) {
+  #nyolcag{
+    display: inline;
+  }
+}
 
 
