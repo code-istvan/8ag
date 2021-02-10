@@ -1,5 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import './navbar8.css';
 import AnimeLogo from './AnimeLogo';

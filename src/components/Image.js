@@ -1,5 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import pic from './landing_img.jpg';
 import Image from 'react-bootstrap/Image';
 
