@@ -9,7 +9,7 @@ import Head1 from '../components/StyledComponents/Head1';
 import DevTooltipPosta from '../components/DevTooltipPosta';
 import DevTooltipPayPal from '../components/DevTooltipPayPal';
 import './projekt.css';
-import bankiutalas from '..//pics/bankiutalas.pdf';
+import bankiutalas from '../pics/bankiutalas.pdf';
 // import styled from 'styled-components';
 
 
