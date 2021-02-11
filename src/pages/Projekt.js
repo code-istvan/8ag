@@ -9,7 +9,6 @@ import Head1 from '../components/StyledComponents/Head1';
 import DevTooltipPosta from '../components/DevTooltipPosta';
 import DevTooltipPayPal from '../components/DevTooltipPayPal';
 import './projekt.css';
-import bankiutalas from '..//pics/bankiutalas.pdf';
 // import styled from 'styled-components';
 
 
@@ -28,7 +27,7 @@ const Projekt = () => {
                       <Card.Text>Budapest Bank (forint alapú bankszámla)</Card.Text>
                       <Card.Title as="h1">10103104-54928200-01004009</Card.Title>
                       <Card.Text>Kedvezményezett neve: Nyolcágú jóga alapítvány<hr /> Kérjük, hogy a közleménybe írjátok be a támogatni kívánt <Link href="/projektjeink">projekt</Link> nevét. Vagy ha az általános működésünket szeretnéd támogatni írd be a közleménybe: “általános”. A közlemény nélkül beérkező összegeket alapítványunk alaptevékenységére fordítjuk. Példa: ha a <Link href="/projektjeink">ONE SIMPLE THING</Link> projektet szeretné támogatni, a közleménybe ezt írd: “one simple thing”.</Card.Text>
-                      <Button variant="primary" href={bankiutalas} target="_blank" rel="noopener noreferrer">Adatok letöltése .pdf-be</Button>
+                      <Button variant="primary" href="https://bandhaworks.hu/Files/8ag_banki_utalas.pdf" target="_blank" rel="noopener noreferrer">Adatok letöltése .pdf-be</Button>
                     </Card.Body>
                     <Card.Footer className="text-muted"><b>Köszönjük :-)</b></Card.Footer>
                   </Card>
