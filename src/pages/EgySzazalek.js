@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Link from '../components/StyledComponents/Link';
 import Head1 from '../components/StyledComponents/Head1';
+import MyPDF from '../pdfs/egyszazalek.pdf';
 import '../components/egyszazalek.css';
 
 const EgySzazalek = () => {
@@ -32,7 +33,7 @@ const EgySzazalek = () => {
                     <Card.Body>
                       <Card.Title as="h1">18734373-1-41</Card.Title>
                       <Card.Text>Ezt a számot írd be a bevallásodba ha szeretnél minket támogatni.</Card.Text>
-                      <Button variant="primary" href="https://bandhaworks.hu/Files/egyszazalek.pdf" target="_blank" rel="noopener noreferrer" >Adatok letöltése .pdf-ben</Button>
+                      <Button variant="primary" href={MyPDF} download="8ag_egyszazalek.pdf" target="_blank" rel="noopener noreferrer">Adatok letöltése .pdf-be</Button>
                     </Card.Body>
                     <Card.Footer className="text-muted"><b>Köszönjük :-)</b></Card.Footer>
                   </Card>
