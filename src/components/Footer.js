@@ -44,7 +44,7 @@ const Footer = () => {
           width='40'
           height='40'
           className='d-inline-block align-top'
-          alt=''
+          alt='facebook'
         />
       </a>
       <a href="https://www.instagram.com/bandhaworks/" target="_blank" rel="noreferrer">
@@ -53,7 +53,7 @@ const Footer = () => {
             width='40'
             height='40'
             className='d-inline-block align-top'
-          alt=''
+          alt='instagram'
         />
       </a>
       <a href="http://m.me/nyolcag" target="_blank" rel="noreferrer">
@@ -62,7 +62,7 @@ const Footer = () => {
               width='40'
               height='40'
               className='d-inline-block align-top'
-            alt=''
+            alt='messenger'
             />
       </a>
       <a href="https://t.me/@istvan108" target="_blank" rel="noreferrer">
@@ -71,7 +71,7 @@ const Footer = () => {
             width='40'
             height='40'
             className='d-inline-block align-top'
-          alt=''
+          alt='telegram'
         />
       </a><p />
         </Col>
