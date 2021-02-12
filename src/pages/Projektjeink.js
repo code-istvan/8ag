@@ -20,9 +20,9 @@ const Projectjeink = () => {
               <p>Jelenleg az alábbi projektjeink vannak előkészítés alatt.</p>
             </Col>
           </Row>
-          <Row>
-            <Col>
-              <Card style={{ width: '18rem' }} className="cardHover">
+          <Row> 
+            <Col md={4}>
+              <Card className="cardHover">
                 <Card.Img variant="top" src={img1} />
                   <Card.Body className="bodyColor">
                     <Card.Title>Egy Egyszerű Dolog - könyv</Card.Title>
@@ -31,9 +31,9 @@ const Projectjeink = () => {
                       </Card.Text>
                   </Card.Body>
               </Card>
-            </Col>
-            <Col>
-            <Card style={{ width: '18rem' }} className="cardHover">
+            </Col><br />
+            <Col md={4}>
+            <Card className="cardHover">
                 <Card.Img variant="top" src={img2} />
                   <Card.Body className="bodyColor">
                     <Card.Title>Jóga és Vegánság - könyv</Card.Title>
@@ -42,9 +42,9 @@ const Projectjeink = () => {
                       </Card.Text>
                   </Card.Body>
               </Card>
-            </Col>
-            <Col>
-            <Card style={{ width: '18rem' }} className="cardHover">
+            </Col><br />
+            <Col md={4}>
+            <Card className="cardHover">
                 <Card.Img variant="top" src={img3} />
                   <Card.Body className="bodyColor">
                     <Card.Title>Isten megismerése - könyv</Card.Title>
