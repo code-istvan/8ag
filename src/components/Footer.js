@@ -36,7 +36,8 @@ const Footer = () => {
     <Row>
       <Col className='backgroundColorTop'><H5Tag>“A test nehézkes, az elme vibráló, a lélek sugárzó. A jóga gyakorlása kibontakoztatja a testben rejlő lehetőséget és a vibráló elme szintjére emelik, hogy mindkettő - a vibrálóvá vált test és elme - a lélek fénye felé fordulhasson.”</H5Tag><br /></Col>
     </Row>
-    <Row xs={1} md={2} lg={3} className='backgroundColor'>
+    <Row md={4} className='backgroundColor'>
+    {/* <Row xs={1} md={2} lg={3} className='backgroundColor'> */}
     <Col><H6Tag>LEGYÉL A BARÁTUNK</H6Tag>
       <a href="https://www.facebook.com/nyolcag" target="_blank" rel="noreferrer">
         <img

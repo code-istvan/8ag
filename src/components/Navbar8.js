@@ -8,13 +8,6 @@ const Navbar8 = () => {
     <Navbar collapseOnSelect expand='lg' className="color-nav" variant='light' sticky="top">
       <Navbar.Brand href='/'>
         <AnimeLogo  alt='nyolcág'/>
-        {/* <img
-          src='http://www.nyolcag.hu/8ag.svg'
-          width='70'
-          height='70'
-          className='d-inline-block align-top'
-          alt=''
-        /> */}
       </Navbar.Brand>
       <Navbar.Brand id="BrandNameFont">NYOLCÁGÚ JÓGA ALAPÍTVÁNY</Navbar.Brand><Navbar.Brand id="nyolcag">NYOLCÁG</Navbar.Brand>
       <Navbar.Toggle aria-controls='responsive-navbar-nav' />

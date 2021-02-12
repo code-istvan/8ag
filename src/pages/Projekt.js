@@ -8,6 +8,7 @@ import Link from '../components/StyledComponents/Link';
 import Head1 from '../components/StyledComponents/Head1';
 import DevTooltipPosta from '../components/DevTooltipPosta';
 import DevTooltipPayPal from '../components/DevTooltipPayPal';
+import Accordion from 'react-bootstrap/Accordion'
 import './projekt.css';
 import MyPDF2 from '../pdfs/8ag_banki_utalas.pdf';
 // import styled from 'styled-components';
