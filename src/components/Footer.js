@@ -83,12 +83,17 @@ const Footer = () => {
       </a><p />
         </Col>
         <Col>
-          <H6Tag>HÍRLEVÉL</H6Tag>
+    
+            <H6Tag>HÍRLEVÉL</H6Tag>
             <form className="contact-form" onSubmit={sendEmail}>
-              <input type="email" name="user_email" id="emailstyle" placeholder="E-mail címed" onChange={inputClick} required></input>
-              {/* <input type="submit" value="Küldés" id="buttonstyle"></input> */}
-              <div id="lol"></div>
+              <table>
+                <tr>
+                  <td><div><input type="email" name="user_email" id="emailstyle" placeholder="E-mail címed" onChange={inputClick} required></input></div></td>
+                  <td><div id="lol"></div></td>
+                </tr>
+              </table>
             </form>
+  
         </Col>
         <Col><H6Tag>ADATVÉDELEM</H6Tag>
           <p>Adatvédelmi nyilatkozat<br />Sütik<br /><a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noreferrer">Freepik</a> által készített ikonok a <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">flaticon.com</a> oldalról</p>
