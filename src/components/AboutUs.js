@@ -16,7 +16,7 @@ const AboutUs = () => {
       <Container>
         <Head1>Nyolcágú jóga alapítvány</Head1>
           <Row>
-            <Col><PaddingP>Az Alapítvány alapvető célja, hogy a jóga elméletét és gyakorlatát minél szélesebb körben és folyamatosan népszerűsítse Magyarországon.
+            <Col><PaddingP>Az Alapítvány célja, hogy a jóga elméletét és gyakorlatát minél szélesebb körben és folyamatosan népszerűsítse Magyarországon.
             Az Indiából eredeztethető jóga már évezredek óta segíti az embereket a testi és lelki egészség elérésében és megőrzésében.
             Áldásos hatásai ma már minden kétségen felül bizonyítottak, gyakorlóinak nem csupán fizikai kondícióját és általános egészségi állapotát javítja,
             hanem egy komplex hatásmechanizmus révén segíti őket abban, hogy az élet többi területén is könnyen megállják a helyüket, boldogan és kiegyensúlyozottan éljenek.

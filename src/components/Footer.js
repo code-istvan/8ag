@@ -33,9 +33,8 @@ const Footer = () => {
   }
 
   const inputClick = () => {
-    ReactDOM.render(<input type="submit" value="Küldés" id="buttonstyle"></input>, document.getElementById('lol'));
+    ReactDOM.render(<input type="submit" value="KÜLDÉS" id="buttonstyle"></input>, document.getElementById('lol'));
   }
-
 
   return (
   <Container fluid >
@@ -72,7 +71,7 @@ const Footer = () => {
             alt='messenger'
             />
       </a>
-      <a href="https://t.me/@istvan108" target="_blank" rel="noreferrer">
+      <a href="https://t.me/@istvan108" target="_blank" rel="noreferrer" id="test">
         <img
           src={telegram}
             width='40'
@@ -83,18 +82,15 @@ const Footer = () => {
       </a><p />
         </Col>
         <Col>
-    
             <H6Tag>HÍRLEVÉL</H6Tag>
             <form className="contact-form" onSubmit={sendEmail}>
               <input type="email" name="user_email" id="emailstyle" placeholder="E-mail címed" onChange={inputClick} required></input>
               <div id="lol"></div>
             </form>
-  
         </Col>
         <Col><H6Tag>ADATVÉDELEM</H6Tag>
           <p>Adatvédelmi nyilatkozat<br />Sütik<br /><a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noreferrer">Freepik</a> által készített ikonok a <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">flaticon.com</a> oldalról</p>
         </Col>
-          
     </Row>
     <Row>
       <Col className='backgroundColor2'><PtagCopyright>Copyright© 2015-{new Date().getFullYear()} Nyolcágú Jóga Alapítvány  |  Designed by OM_Works_Yoga_Creatives.</PtagCopyright></Col>
