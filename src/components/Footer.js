@@ -8,6 +8,7 @@ import telegram from '..//pics/telegram.svg';
 import messenger from '..//pics/messenger.svg';
 import instagram from '..//pics/instagram.svg';
 import facebook from '..//pics/facebook.svg';
+import ReactDOM from 'react-dom';
 
 
 const Footer = () => {
@@ -30,6 +31,11 @@ const Footer = () => {
       );
       e.target.reset();
   }
+
+  const inputClick = () => {
+    ReactDOM.render(<input type="submit" value="Küldés" id="buttonstyle"></input>, document.getElementById('lol'));
+  }
+
 
   return (
   <Container fluid >
@@ -79,8 +85,9 @@ const Footer = () => {
         <Col>
           <H6Tag>HÍRLEVÉL</H6Tag>
             <form className="contact-form" onSubmit={sendEmail}>
-              <input type="email" name="user_email" id="emailstyle" placeholder="E-mail címed" required></input>
-              <input type="submit" value="Küldés" id="buttonstyle"></input>
+              <input type="email" name="user_email" id="emailstyle" placeholder="E-mail címed" onChange={inputClick} required></input>
+              {/* <input type="submit" value="Küldés" id="buttonstyle"></input> */}
+              <div id="lol"></div>
             </form>
         </Col>
         <Col><H6Tag>ADATVÉDELEM</H6Tag>

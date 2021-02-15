@@ -24,6 +24,7 @@ const Uvegzseb = () => {
             </Row>
         </Container>
       </Container>
+      
     );
 };
 
