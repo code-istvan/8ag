@@ -89,7 +89,9 @@ const Footer = () => {
             </form><p />
         </Col>
         <Col sm><H6Tag>ADATVÉDELEM</H6Tag>
-          <p>Adatvédelmi nyilatkozat<br />Sütik<br /><a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noreferrer">Freepik</a> által készített ikonok a <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">flaticon.com</a> oldalról</p>
+          <p>Adatvédelmi nyilatkozat<br />Sütik<br />
+            <a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noreferrer">Freepik</a> által készített ikonok a <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">flaticon.com</a> oldalról
+          </p>
         </Col>
     </Row>
     <Row>

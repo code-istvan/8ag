@@ -6,13 +6,16 @@ import Col from 'react-bootstrap/Col';
 import GoogleMap from '../components/GoogleMap';
 import Head1 from '../components/StyledComponents/Head1';
 import ButtonInputStyle from '../components/StyledComponents/ButtonInputStyle';
+import ReactDOM from 'react-dom';
 import './Kapcsolat.css';
 
+const inputClick2 = () => {
+  ReactDOM.render(<ButtonInputStyle type="submit" value="Küldés"></ButtonInputStyle>, document.getElementById('lol2'))
+};
 
 export default function Kapcsolat() {
   function sendEmail(e) {
     e.preventDefault();
-
 
     emailjs
       .sendForm(
@@ -32,13 +35,12 @@ export default function Kapcsolat() {
     e.target.reset();
   }
 
-  return (
 
+  
+  return (
    <form className="contact-form" onSubmit={sendEmail}>
-     
      <GoogleMap />
       <Container>
-        
         <Row>
           <Col>
             <Head1>Kapcsolat</Head1>
@@ -46,15 +48,13 @@ export default function Kapcsolat() {
         </Row>
         <Row>
           <Col sm={4}>
-            <input type="text" name="user_name" placeholder="Feladó neve*" className="InputMassage" required />
-            <input type="email" name="user_email" placeholder="E-mail cím*" className="InputMassage1" required />
+            <input type="text" name="user_name" placeholder="Feladó neve*" className="InputMassage" onChange={inputClick2} required />
+            <input type="email" name="user_email" placeholder="E-mail cím*" className="InputMassage1" onChange={inputClick2} required />
           </Col>
           <Col sm={8}>
-            <textarea name="message" placeholder="Üzenet*" className="TextAreaStyle" required />
+            <textarea name="message" placeholder="Üzenet*" className="TextAreaStyle" onChange={inputClick2} required />
           </Col>
-          <Col>
-            <ButtonInputStyle type="submit" value="Küldés"></ButtonInputStyle>
-          </Col>
+          <Col id="lol2"></Col>
         </Row>
         <Row>
           <Col><p>A *-al jelőlt mezők kitöltése kötelező. Ha az üzeneted rendben megérkezett hozzánk, rendszerünk automata visszaigazolást küld részedre. Ha nem találod a visszaigazolást nézd meg a spam/kéretlen mappádban is.</p></Col>
