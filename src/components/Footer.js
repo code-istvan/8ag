@@ -41,9 +41,9 @@ const Footer = () => {
     <Row>
       <Col className='backgroundColorTop'><H5Tag>“A test nehézkes, az elme vibráló, a lélek sugárzó. A jóga gyakorlása kibontakoztatja a testben rejlő lehetőséget és a vibráló elme szintjére emelik, hogy mindkettő - a vibrálóvá vált test és elme - a lélek fénye felé fordulhasson.”</H5Tag><br /></Col>
     </Row>
-    <Row md={4} className='backgroundColor'>
+    <Row className='backgroundColor'>
     {/* <Row xs={1} md={2} lg={3} className='backgroundColor'> */}
-    <Col><H6Tag>LEGYÉL A BARÁTUNK</H6Tag>
+    <Col sm><H6Tag>LEGYÉL A BARÁTUNK</H6Tag>
       <a href="https://www.facebook.com/nyolcag" target="_blank" rel="noreferrer">
         <img
           src={facebook}
@@ -81,14 +81,14 @@ const Footer = () => {
         />
       </a><p />
         </Col>
-        <Col>
+        <Col sm>
             <H6Tag>HÍRLEVÉL</H6Tag>
             <form className="contact-form" onSubmit={sendEmail}>
               <input type="email" name="user_email" id="emailstyle" placeholder="E-mail címed" onChange={inputClick} required></input>
               <div id="lol"></div>
-            </form>
+            </form><p />
         </Col>
-        <Col><H6Tag>ADATVÉDELEM</H6Tag>
+        <Col sm><H6Tag>ADATVÉDELEM</H6Tag>
           <p>Adatvédelmi nyilatkozat<br />Sütik<br /><a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noreferrer">Freepik</a> által készített ikonok a <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">flaticon.com</a> oldalról</p>
         </Col>
     </Row>

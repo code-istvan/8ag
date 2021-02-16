@@ -20,7 +20,6 @@
 }
 
 .ml-auto a{
-  /* color: white !important; */
   font-size: 1.1em !important;
   color: black !important;
   font-family: monospace;
@@ -67,7 +66,7 @@
   #nyolcag{
     display: inline;
     font-size: 1.1em !important;
-    color: black !important;
+    color: #5D5D5F  !important;
     font-family: monospace;
   }
 }
