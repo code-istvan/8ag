@@ -8,6 +8,10 @@
     font-family: monospace;
 }
 
+.InputMassage[type=text]:focus {
+    border: 4px solid #027BFF;
+  }
+
 .InputMassage1 {
     border: 3px solid darkgray;
     border-radius: 3px;
@@ -17,6 +21,10 @@
     width: 100%;
     font-family: monospace;
 }
+
+.InputMassage1[type=email]:focus {
+    border: 4px solid #027BFF;
+  }
 
 .TextAreaStyle {
     border: 3px solid darkgray;
@@ -28,7 +36,13 @@
     font-family: monospace;
 }
 
-div.col-sm-4 {
-    padding-bottom: px;
+textarea:focus {
+    border: 4px solid #027BFF;
+  }
 
-}
+
+/* div.col-sm-4 {
+    padding-bottom: px;
+} */
+
+

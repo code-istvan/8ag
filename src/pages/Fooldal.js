@@ -2,10 +2,10 @@ import React from 'react';
 //Page Components
 import AboutUs from '../components/AboutUs';
 
-const Home = () => {
+const Fooldal = () => {
     return(
         <AboutUs />
     )
 }
 
-export default Home;
+export default Fooldal;

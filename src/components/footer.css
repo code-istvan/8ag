@@ -13,8 +13,8 @@
 
 input {
   margin-bottom: 10px;
-  font-size: 12px;
-  padding: 10px;
+  font-size: 15px;
+  padding: 8px;
   font-family: monospace;
 }
 
@@ -27,6 +27,10 @@ input {
   border-radius: 5px;
   width: 80%;
   margin-right: 3px;
+}
+
+#emailstyle[type=email]:focus {
+  border: 4px solid #027BFF;
 }
 
 #buttonstyle {
@@ -50,6 +54,8 @@ img {
 .icon:hover {
   background: #007BFF;
 } */
+
+
 
 
 

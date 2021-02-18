@@ -13,7 +13,7 @@ const Navbar8 = () => {
       <Navbar.Toggle aria-controls='responsive-navbar-nav' />
       <Navbar.Collapse id='responsive-navbar-nav'>
         <Nav className='ml-auto'>
-          <Nav.Link className='hoover' href='/'>HOME</Nav.Link>
+          <Nav.Link className='hoover' href='/'>FŐOLDAL</Nav.Link>
           <Nav.Link className='hoover' href='/projektjeink'>PROJEKTJEINK</Nav.Link>
           <NavDropdown title='TÁMOGATÁS' id='basic-nav-tamogatas'>
             <NavDropdown.Item href='/egyszazalek' id='basic-nav-tamogatas-item'>1%</NavDropdown.Item>

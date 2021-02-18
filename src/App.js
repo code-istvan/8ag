@@ -6,7 +6,7 @@ import Mainimage from './components/Image';
 //Router
 import { Switch, Route } from 'react-router-dom';
 // Import Pages
-import Home from './pages/Home';
+import Fooldal from './pages/Fooldal';
 import EgySzazalek from './pages/EgySzazalek';
 import Kapcsolat from './pages/Kapcsolat';
 import Projekt from './pages/Projekt';
@@ -20,7 +20,7 @@ const App=()=> {
       <Switch>
         <Route path="/" exact>
           <Mainimage />
-          <Home />
+          <Fooldal />
         </Route>
         <Route path="/projektjeink">
           <Mainimage />
