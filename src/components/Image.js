@@ -4,6 +4,7 @@ import picSmall from "..//pics/landing_img_small.jpg";
 import Image from "react-bootstrap/Image";
 import "./image.css";
 
+
 const mainimage = () => {
   return (
     <Image

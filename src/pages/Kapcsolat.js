@@ -48,11 +48,11 @@ export default function Kapcsolat() {
         </Row>
         <Row>
           <Col sm={4}>
-            <input type="text" name="user_name" placeholder="Feladó neve*" className="InputMassage" onChange={inputClick2} required />
-            <input type="email" name="user_email" placeholder="E-mail cím*" className="InputMassage1" onChange={inputClick2} required />
+            <input type="text" name="user_name" placeholder="Feladó neve*" className="InputMassage" autoComplete="off" onChange={inputClick2} required />
+            <input type="email" name="user_email" placeholder="E-mail cím*" className="InputMassage1" autoComplete="off" onChange={inputClick2} required />
           </Col>
           <Col sm={8}>
-            <textarea name="message" placeholder="Üzenet*" className="TextAreaStyle" onChange={inputClick2} required />
+            <textarea name="message" placeholder="Üzenet*" className="TextAreaStyle" autoComplete="off" onChange={inputClick2} required />
           </Col>
           <Col id="lol2"></Col>
         </Row>

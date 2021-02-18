@@ -135,45 +135,15 @@ const Footer = () => {
           <p />
         </Col>
         <Col sm>
-          <H6Tag>HÍRLEVÉL</H6Tag>
-          <form className="contact-form" onSubmit={sendEmail}>
-            <input
-              type="email"
-              name="user_email"
-              id="emailstyle"
-              placeholder="E-mail címed"
-              onChange={inputClick}
-              required
-            ></input>
-            <div id="lol"></div>
-          </form>
-          <p />
+            <H6Tag>HÍRLEVÉL</H6Tag>
+            <form className="contact-form" onSubmit={sendEmail}>
+              <input type="email" name="user_email" id="emailstyle" placeholder="E-mail címed" autoComplete="off" onChange={inputClick} required></input>
+              <div id="lol"></div>
+            </form><p />
         </Col>
-        <Col sm>
-          <H6Tag>ADATVÉDELEM</H6Tag>
-          <p>
-            Adatvédelmi nyilatkozat
-            <br />
-            Sütik
-            <br />
-            <a
-              href="https://www.freepik.com"
-              title="Freepik"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Freepik
-            </a>{" "}
-            által készített ikonok a{" "}
-            <a
-              href="https://www.flaticon.com/"
-              title="Flaticon"
-              target="_blank"
-              rel="noreferrer"
-            >
-              flaticon.com
-            </a>{" "}
-            oldalról
+        <Col sm><H6Tag>ADATVÉDELEM</H6Tag>
+          <p>Adatvédelmi nyilatkozat<br />Sütik<br />
+            {/* <a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noreferrer">Freepik</a> által készített ikonok a <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">flaticon.com</a> oldalról */}
           </p>
         </Col>
       </Row>
