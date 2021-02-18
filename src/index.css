@@ -21,11 +21,23 @@ code {
   outline: 0;
   }
 
-  overflow-x: hidden;
-  width: 100%;
+  /* overflow-x: hidden;
+  width: 100%; */
   
-  body {    overflow-x: hidden;
-  width: 100%;}
+  body {    
+    overflow-x: hidden;
+    width: 100%;
+  }
+/* 
+  svg:hover {
+    fill: blue;
+  } */
 
- 
+  /* svg:hover {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  } */
+
+  svg:hover path{
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  }
 
