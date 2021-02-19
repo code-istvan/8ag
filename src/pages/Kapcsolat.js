@@ -8,6 +8,7 @@ import Head1 from '../components/StyledComponents/Head1';
 import ButtonInputStyle from '../components/StyledComponents/ButtonInputStyle';
 import ReactDOM from 'react-dom';
 import './Kapcsolat.css';
+import { Helmet } from "react-helmet";
 
 const inputClick2 = () => {
   ReactDOM.render(<ButtonInputStyle type="submit" value="Küldés"></ButtonInputStyle>, document.getElementById('lol2'))
@@ -38,9 +39,13 @@ export default function Kapcsolat() {
 
   
   return (
+  
    <form className="contact-form" onSubmit={sendEmail}>
      <GoogleMap />
       <Container>
+        <Helmet>
+          <title>Kapcsolat - Nyolcág</title>
+        </Helmet>
         <Row>
           <Col>
             <Head1>Kapcsolat</Head1>
