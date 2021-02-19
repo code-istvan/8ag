@@ -5,19 +5,21 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Link from '../components/StyledComponents/Link';
-import Head1 from '../components/StyledComponents/Head1';
 import DevTooltipPosta from '../components/DevTooltipPosta';
 import DevTooltipPayPal from '../components/DevTooltipPayPal';
-import Accordion from 'react-bootstrap/Accordion'
 import './projekt.css';
 import MyPDF2 from '../pdfs/8ag_banki_utalas.pdf';
+import {Helmet} from "react-helmet";
 // import styled from 'styled-components';
 
 
 const Projekt = () => {
     return (
       <Container className="maincontainer">
-        <Head1>Projekt támogatás</Head1>
+        <Helmet>
+          <title>Projekt támogatás - Nyolcág</title>
+        </Helmet>
+        <h1>Projekt támogatás</h1>
         <Row>
           <Col className="firstline"><a>Ha valamelyik <Link href="/projektjeink">projektünket</Link> szeretnéd támogatni az alábbi finanszírozási lehetőségek közűl válaszhatsz.</a></Col>
         </Row>

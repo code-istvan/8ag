@@ -18,9 +18,9 @@ const UvegzsebTable = () => {
   <tbody>
     <tr className="secondLineColor">
       <td>1</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>2021.02.17</td>
+      <td>átmenetileg anonim*</td>
+      <td>100.000.-</td>
     </tr>
     <tr className="firstLineColor">
       <td>2</td>

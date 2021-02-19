@@ -3,18 +3,21 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import Head1 from '../components/StyledComponents/Head1';
 import './projektjeink.css';
 import img1 from '..//pics/Eddie_book.jpg';
 import img2 from '..//pics/yo_ve_book.jpg';
 import img3 from '..//pics/how_to_know.jpg';
 import Link from '../components/StyledComponents/Link';
+import {Helmet} from "react-helmet";
 
 
 const Projectjeink = () => {
     return (
       <Container>
-        <Head1>Projektjeink</Head1>
+        <Helmet>
+          <title>Projektjeink - Nyolcág</title>
+        </Helmet>
+        <h1>Projektjeink</h1>
           <Row>
             <Col>
               <p>Jelenleg az alábbi projektjeink vannak előkészítés alatt.</p>

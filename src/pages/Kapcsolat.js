@@ -4,7 +4,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import GoogleMap from '../components/GoogleMap';
-import Head1 from '../components/StyledComponents/Head1';
 import ButtonInputStyle from '../components/StyledComponents/ButtonInputStyle';
 import ReactDOM from 'react-dom';
 import './Kapcsolat.css';
@@ -35,8 +34,6 @@ export default function Kapcsolat() {
       );
     e.target.reset();
   }
-
-
   
   return (
   
@@ -48,7 +45,7 @@ export default function Kapcsolat() {
         </Helmet>
         <Row>
           <Col>
-            <Head1>Kapcsolat</Head1>
+            <h1>Kapcsolat</h1>
           </Col>
         </Row>
         <Row>

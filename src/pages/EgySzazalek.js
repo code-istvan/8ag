@@ -5,15 +5,18 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Link from '../components/StyledComponents/Link';
-import Head1 from '../components/StyledComponents/Head1';
 import MyPDF from '../pdfs/egyszazalek.pdf';
-import '../components/egyszazalek.css';
+import './egyszazalek.css';
+import {Helmet} from "react-helmet";
 
 const EgySzazalek = () => {
     return (
       <Container fluid className='maincontainer'>
+        <Helmet>
+          <title>1% - Nyolcág</title>
+        </Helmet>
         <Container>
-          <Head1>Adó 1%</Head1>
+          <h1>Adó 1%</h1>
             <Row className="justify-content-md-center">
               <Col className="justify">
                 <p>Évente mintegy 10 milliárd forintról nem rendelkeznek az adózók. Ne hagyd bent az 1 százalékot, 

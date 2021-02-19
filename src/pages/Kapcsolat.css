@@ -40,9 +40,10 @@ textarea:focus {
     border: 4px solid #027BFF;
   }
 
+  h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
-/* div.col-sm-4 {
-    padding-bottom: px;
-} */
 
 

@@ -4,7 +4,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import Head1 from '../components/StyledComponents/Head1';
 import './AboutUs.css';
 import styled from 'styled-components';
 import Link from '../components/StyledComponents/Link';
@@ -12,7 +11,7 @@ import Link from '../components/StyledComponents/Link';
 const AboutUs = () => {
   return (
       <Container>
-        <Head1>Nyolcágú jóga alapítvány</Head1>
+        <h1>Nyolcágú jóga alapítvány</h1>
           <Row>
             <Col><PaddingP>Az Alapítvány célja, hogy a jóga elméletét és gyakorlatát minél szélesebb körben és folyamatosan népszerűsítse Magyarországon.
             Az Indiából eredeztethető jóga már évezredek óta segíti az embereket a testi és lelki egészség elérésében és megőrzésében.
