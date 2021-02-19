@@ -9,8 +9,6 @@ import './AboutUs.css';
 import styled from 'styled-components';
 import Link from '../components/StyledComponents/Link';
 
-
-
 const AboutUs = () => {
   return (
       <Container>

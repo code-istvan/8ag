@@ -12,10 +12,16 @@ import Kapcsolat from './pages/Kapcsolat';
 import Projekt from './pages/Projekt';
 import Projektjeink from './pages/Projektjeink';
 import Uvegzseb from './pages/Uvegzseb';
+import {Helmet} from "react-helmet";
 
 const App=()=> {
   return (
     <div className="App">
+      <Helmet>
+          <meta charSet="utf-8" />
+          <title>Nyolcágú Jóga Alapítvány</title>
+          <meta name="description" content="Nyolcágú Jóga Alapítvány honlapja" />
+      </Helmet>
       <Navbar8 />
       <Switch>
         <Route path="/" exact>
