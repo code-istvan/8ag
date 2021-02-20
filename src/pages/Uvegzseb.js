@@ -20,7 +20,7 @@ const Uvegzseb = () => {
                 <p>A Nyolcágú Jóga Alapítvány a bizalom és átláthatóság céljából létrehozta az üvegzseb oldalt. Projektjeink, működésünk cashfloja itt tekinthető meg.</p>
                 <h3>2021-ben beérkezett magán- és intézményi támogatások</h3>
                 <UvegzsebTable /><br />
-                <p>*Az adományozó hozzájárulásának lekérdezése folyamatban van, hogy hozzájárul-e a nevének megjelenéséhez vagy anoním marad.</p>
+                <p>*Az adományozó hozzájárulásának lekérdezése folyamatban van, hogy hozzájárul-e a nevének megjelenéséhez.</p>
                 <h3>Kiadásaink 2021-ben</h3>
                 <UvegzsebKiadas /><br />
               </Col>
