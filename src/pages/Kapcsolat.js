@@ -10,7 +10,14 @@ import './Kapcsolat.css';
 import { Helmet } from "react-helmet";
 
 const inputClick2 = () => {
-  ReactDOM.render(<ButtonInputStyle type="submit" value="Küldés"></ButtonInputStyle>, document.getElementById('lol2'))
+  ReactDOM.render(
+    <React.Fragment>
+      <ButtonInputStyle type="submit" value="Küldés"></ButtonInputStyle> 
+      <input type="checkbox" id="gdpr" name="gdpr" value="true" required></input>
+      <label for="gdpr">Elfogadom az oldal alján található adatvédelmi tájékoztatót</label>
+      <p>Ha az üzeneted rendben megérkezett hozzánk, rendszerünk automata visszaigazolást küld részedre. Ha nem találod a visszaigazolást nézd meg a spam/kéretlen mappádban is.</p><br />
+    </React.Fragment>,
+    document.getElementById('lol2'))
 };
 
 export default function Kapcsolat() {
@@ -56,11 +63,10 @@ export default function Kapcsolat() {
           <Col sm={8}>
             <textarea name="message" placeholder="Üzenet*" className="TextAreaStyle" autoComplete="off" onChange={inputClick2} required />
           </Col>
+        </Row>  
+        <Row>
           <Col id="lol2"></Col>
         </Row>
-        <Row>
-          <Col><p>A *-al jelőlt mezők kitöltése kötelező. Ha az üzeneted rendben megérkezett hozzánk, rendszerünk automata visszaigazolást küld részedre. Ha nem találod a visszaigazolást nézd meg a spam/kéretlen mappádban is.</p></Col>
-        </Row>  
       </Container>
       </form>
       
