@@ -40,7 +40,7 @@ const Footer = () => {
     ReactDOM.render(
       <React.Fragment>
           <input type="submit" value="KÜLDÉS" id="buttonstyle"></input><br />
-          <label><input type="checkbox" required /> Elfogadom az oldal alján található adatvédelmi tájékoztatót</label>
+          <label><input type="checkbox" required /> Elfogadom az Adatvédelmi nyilatkozatot</label>
       </React.Fragment>,
       document.getElementById("lol")
     );
@@ -145,7 +145,7 @@ const Footer = () => {
             </form><p />
         </Col>
         <Col sm><H6Tag>ADATVÉDELEM</H6Tag>
-          <p>Adatvédelmi tájékoztató<br />Sütik<br />
+          <p>Adatvédelmi tájékoztató<br />Sütik<br />Oldaltérkép<br />
             {/* <a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noreferrer">Freepik</a> által készített ikonok a <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">flaticon.com</a> oldalról */}
           </p>
         </Col>
