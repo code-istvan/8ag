@@ -38,7 +38,10 @@ const Footer = () => {
 
   const inputClick = () => {
     ReactDOM.render(
-      <input type="submit" value="KÜLDÉS" id="buttonstyle"></input>,
+      <React.Fragment>
+          <input type="submit" value="KÜLDÉS" id="buttonstyle"></input><br />
+          <label><input type="checkbox" required /> Elfogadom az oldal alján található adatvédelmi tájékoztatót</label>
+      </React.Fragment>,
       document.getElementById("lol")
     );
   };
