@@ -20,7 +20,7 @@ import RouteChangeTracker from './components/RouteChangeTracker';
 const App=()=> {
 
   useEffect(() => {
-    ReactGA.initialize('G-0T0M27QEV3');
+    ReactGA.initialize('G-5F8BGTGGK5');
     // To Report Page View 
     ReactGA.pageview(window.location.pathname + window.location.search);
     // ReactGA.pageview(window.location.pathname + window.location.search);
