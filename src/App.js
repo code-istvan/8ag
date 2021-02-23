@@ -14,7 +14,7 @@ import Projektjeink from './pages/Projektjeink';
 import Uvegzseb from './pages/Uvegzseb';
 import {Helmet} from "react-helmet";
 import ReactGA from 'react-ga';
-import RouteChangeTracker from './components/RouteChangeTracker';
+// import RouteChangeTracker from './components/RouteChangeTracker';
 
 
 const App=()=> {
