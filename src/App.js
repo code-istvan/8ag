@@ -22,7 +22,8 @@ const App=()=> {
   useEffect(() => {
     ReactGA.initialize('G-8T70HTYCZ5');
     // To Report Page View 
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.pageview('/');
+    // ReactGA.pageview(window.location.pathname + window.location.search);
   }, [])
 
   return (
