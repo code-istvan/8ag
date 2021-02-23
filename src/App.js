@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Navbar8 from './components/Navbar8';
 import Footer from './components/Footer';
@@ -13,8 +13,18 @@ import Projekt from './pages/Projekt';
 import Projektjeink from './pages/Projektjeink';
 import Uvegzseb from './pages/Uvegzseb';
 import {Helmet} from "react-helmet";
+import ReactGA from 'react-ga';
+import RouteChangeTracker from './components/RouteChangeTracker';
+
 
 const App=()=> {
+
+  useEffect(() => {
+    ReactGA.initialize('G-8T70HTYCZ5');
+    // To Report Page View 
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, [])
+
   return (
     <div className="App">
       <Helmet>

@@ -39,12 +39,13 @@ const Footer = () => {
   const inputClick = () => {
     ReactDOM.render(
       <React.Fragment>
-          <input type="submit" value="KÜLDÉS" id="buttonstyle"></input><br />
+          <input type="submit" value="KÜLDÉS" id="buttonstyle" ></input><br />
           <label><input type="checkbox" required /> Elfogadom az Adatvédelmi nyilatkozatot</label>
       </React.Fragment>,
       document.getElementById("lol")
     );
   };
+
 
   const HoverEventsHandler = (e) => {    
     if (e.target.alt === "facebook") {
@@ -139,9 +140,10 @@ const Footer = () => {
         </Col>
         <Col sm>
             <H6Tag>HÍRLEVÉL</H6Tag>
-            <form className="contact-form" onSubmit={sendEmail}>
+            <form className="contact-form" onSubmit={sendEmail} >
               <input type="email" name="user_email" id="emailstyle" placeholder="E-mail címed" autoComplete="off" onChange={inputClick} required></input>
               <div id="lol"></div>
+              <div id="lol2"></div>
             </form><p />
         </Col>
         <Col sm><H6Tag>ADATVÉDELEM</H6Tag>
