@@ -27,6 +27,8 @@ const Footer = () => {
       )
       .then(
         (result) => {
+          e.target.value = "";
+          inputClick(e);
           console.log(result.text);
         },
         (error) => {
@@ -36,31 +38,33 @@ const Footer = () => {
     e.target.reset();
   }
 
-  const inputClick = () => {
-    ReactDOM.render(
-      <React.Fragment>
-          <input type="submit" value="KÜLDÉS" id="buttonstyle" ></input><br />
-          <label><input type="checkbox" required /> Elfogadom az Adatvédelmi nyilatkozatot</label>
-      </React.Fragment>,
-      document.getElementById("lol")
-    );
+  const inputClick = (e) => {
+    e.target.value
+      ? ReactDOM.render(
+          <React.Fragment>
+            <input type="submit" value="KÜLDÉS" id="buttonstyle"></input>
+            <br />
+            <label>
+              <input type="checkbox" required /> Elfogadom az Adatvédelmi
+              nyilatkozatot
+            </label>
+          </React.Fragment>,
+          document.getElementById("lol")
+        )
+      : ReactDOM.render("", document.getElementById("lol"));
   };
 
-
-  const HoverEventsHandler = (e) => {    
+  const HoverEventsHandler = (e) => {
     if (e.target.alt === "facebook") {
       e.target.src = e.type === "mouseenter" ? facebook_blue : facebook;
-    }
-    else if(e.target.alt === "instagram"){
+    } else if (e.target.alt === "instagram") {
       e.target.src = e.type === "mouseenter" ? instagram_blue : instagram;
-    }
-    else if(e.target.alt === "messenger"){
+    } else if (e.target.alt === "messenger") {
       e.target.src = e.type === "mouseenter" ? messenger_blue : messenger;
-    }
-    else if(e.target.alt === "telegram"){
+    } else if (e.target.alt === "telegram") {
       e.target.src = e.type === "mouseenter" ? telegram_blue : telegram;
     }
-  }
+  };
 
   return (
     <Container fluid>
@@ -79,75 +83,56 @@ const Footer = () => {
         {/* <Row xs={1} md={2} lg={3} className='backgroundColor'> */}
         <Col sm>
           <H6Tag>LEGYÉL A BARÁTUNK</H6Tag>
-          <a
-            href="https://www.facebook.com/nyolcag"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={facebook}
-              width="40"
-              height="40"
-              className="d-inline-block align-top"
-              alt="facebook"
-              onMouseEnter={(e) => HoverEventsHandler(e)}
-              onMouseLeave={(e) => HoverEventsHandler(e)}
-            />
-          </a>
-          <a
-            href="https://www.instagram.com/bandhaworks/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={instagram}
-              width="40"
-              height="40"
-              className="d-inline-block align-top"
-              alt="instagram"
-              onMouseEnter={(e) => HoverEventsHandler(e)}
-              onMouseLeave={(e) => HoverEventsHandler(e)}
-            />
-          </a>
-          <a href="http://m.me/nyolcag" target="_blank" rel="noreferrer">
-            <img
-              src={messenger}
-              width="40"
-              height="40"
-              className="d-inline-block align-top"
-              alt="messenger"
-              onMouseEnter={(e) => HoverEventsHandler(e)}
-              onMouseLeave={(e) => HoverEventsHandler(e)}
-            />
-          </a>
-          <a
-            href="https://t.me/@istvan108"
-            target="_blank"
-            rel="noreferrer"
-            id="test"
-          >
-            <img
-              src={telegram}
-              width="40"
-              height="40"
-              className="d-inline-block align-top"
-              alt="telegram"
-              onMouseEnter={(e) => HoverEventsHandler(e)}
-              onMouseLeave={(e) => HoverEventsHandler(e)}
-            />
-          </a>
-          <p />
+          <Icons
+            url="https://www.facebook.com/nyolcag"
+            src={facebook}
+            alt="facebook"
+            eventHandler={HoverEventsHandler}
+          />
+          <Icons
+            url="https://www.instagram.com/bandhaworks/"
+            src={instagram}
+            alt="instagram"
+            eventHandler={HoverEventsHandler}
+          />
+          <Icons
+            url="http://m.me/nyolcag"
+            src={messenger}
+            alt="messenger"
+            eventHandler={HoverEventsHandler}
+          />
+          <Icons
+            url="https://t.me/@istvan108"
+            src={telegram}
+            alt="telegram"
+            eventHandler={HoverEventsHandler}
+          />
         </Col>
         <Col sm>
-            <H6Tag>HÍRLEVÉL</H6Tag>
-            <form className="contact-form" onSubmit={sendEmail} >
-              <input type="email" name="user_email" id="emailstyle" placeholder="E-mail címed" autoComplete="off" onChange={inputClick} required></input>
-              <div id="lol"></div>
-              <div id="lol2"></div>
-            </form><p />
+          <H6Tag>HÍRLEVÉL</H6Tag>
+          <form className="contact-form" onSubmit={sendEmail}>
+            <input
+              type="email"
+              name="user_email"
+              id="emailstyle"
+              placeholder="E-mail címed"
+              autoComplete="off"
+              onChange={(e) => inputClick(e)}
+              required
+            ></input>
+            <div id="lol"></div>
+            <div id="lol2"></div>
+          </form>
         </Col>
-        <Col sm><H6Tag>ADATVÉDELEM</H6Tag>
-          <p>Adatvédelmi tájékoztató<br />Sütik<br />Oldaltérkép<br />
+        <Col sm>
+          <H6Tag>ADATVÉDELEM</H6Tag>
+          <p>
+            Adatvédelmi tájékoztató
+            <br />
+            Sütik
+            <br />
+            Oldaltérkép
+            <br />
             {/* <a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noreferrer">Freepik</a> által készített ikonok a <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">flaticon.com</a> oldalról */}
           </p>
         </Col>
@@ -161,6 +146,22 @@ const Footer = () => {
         </Col>
       </Row>
     </Container>
+  );
+};
+
+const Icons = ({ src, alt, url, eventHandler }) => {
+  return (
+    <a href={url} target="_blank" rel="noreferrer">
+      <img
+        src={src}
+        width="40"
+        height="40"
+        className="d-inline-block align-top"
+        alt={alt}
+        onMouseEnter={(e) => eventHandler(e)}
+        onMouseLeave={(e) => eventHandler(e)}
+      />
+    </a>
   );
 };
 
