@@ -20,7 +20,7 @@ import ReactGA from 'react-ga';
 const App=()=> {
 
   useEffect(() => {
-    ReactGA.initialize('G-5F8BGTGGK5');
+    ReactGA.initialize('G-BS3NQ8RDTB');
     // To Report Page View 
     ReactGA.pageview(window.location.pathname + window.location.search);
     // ReactGA.pageview(window.location.pathname + window.location.search);

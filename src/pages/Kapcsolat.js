@@ -14,7 +14,7 @@ const inputClick2 = () => {
     <React.Fragment>
       <ButtonInputStyle type="submit" value="Küldés"></ButtonInputStyle> 
       <input type="checkbox" id="gdpr" name="gdpr" value="true" required></input>
-      <label for="gdpr">Elfogadom az Adatvédelmi nyilatkozatot</label>
+      <label for="gdpr">Megismertem és elfogadom az Adatvédelmi Tájékoztatóban foglaltakat</label>
       <p>Ha az üzeneted rendben megérkezett hozzánk, rendszerünk automata visszaigazolást küld részedre. Ha nem találod a visszaigazolást nézd meg a spam/kéretlen mappádban is.</p><br />
     </React.Fragment>,
     document.getElementById('lol2'))

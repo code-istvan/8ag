@@ -47,8 +47,7 @@ const Footer = () => {
             <input type="submit" value="KÜLDÉS" id="buttonstyle"></input>
             <br />
             <label>
-              <input type="checkbox" required /> Elfogadom az Adatvédelmi
-              nyilatkozatot
+              <input type="checkbox" required /> Megismertem és elfogadom az Adatvédelmi Tájékoztatóban foglaltakat
             </label>
           </React.Fragment>,
           document.getElementById("lol")
