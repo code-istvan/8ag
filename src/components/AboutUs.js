@@ -24,7 +24,6 @@ const AboutUs = () => {
           <Row>
             <Col>
               <PaddingU>
-                <ul>
                   <li>a fő hangsúlyt a közvetlen, gyakorlati oktatásra helyezzük rendezvények, workshopok és tematikus tréningek tartásával;</li>
                   <li>idegen nyelven megjelent szakirodalom fordítása és terjesztése;</li>
                   <li>a jóga gyakorlásával, vagy elméletével összefüggő eredeti szerzői művek létrehozásának és terjesztésének támogatása;</li>
@@ -34,7 +33,6 @@ const AboutUs = () => {
                   <li>a jógikus életmód iránt érdeklődők számára rendszeres összejövetelek, eszmecserék lehetőségének kialakítása klubszerű működési formában;</li>
                   <li>ösztöndíjak, külföldi tréningek és/vagy tanulmányok támogatása, és/vagy külföldi szaktekintélyek Magyarországra látogatásának megszervezése 
                   és finanszírozása a fentebb megfogalmazott célok megvalósításával összefüggésben.</li>
-                </ul>
                 </PaddingU>
             </Col>
           </Row>
