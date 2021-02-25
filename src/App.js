@@ -20,7 +20,7 @@ import ReactGA from 'react-ga';
 const App=()=> {
 
   useEffect(() => {
-    ReactGA.initialize('G-BS3NQ8RDTB');
+    ReactGA.initialize('UA-190644138-1');
     // To Report Page View 
     ReactGA.pageview(window.location.pathname + window.location.search);
     // ReactGA.pageview(window.location.pathname + window.location.search);
