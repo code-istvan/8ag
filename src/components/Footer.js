@@ -13,6 +13,8 @@ import instagram_blue from "..//pics/instagram_blue.svg";
 import messenger_blue from "..//pics/messenger_blue.svg";
 import telegram_blue from "..//pics/telegram_blue.svg";
 import ReactDOM from "react-dom";
+import Link from '../components/StyledComponents/Link';
+
 
 const Footer = () => {
   function sendEmail(e) {
@@ -141,7 +143,7 @@ const Footer = () => {
         <Col className="backgroundColor2">
           <PtagCopyright>
             Copyright© 2015-{new Date().getFullYear()} Nyolcágú Jóga Alapítvány
-            | Designed by OM_Works_Yoga_Creatives.
+            | Designed by <Link href="https://omworks.hu" target="_blank">OM_Works_Yoga_Creatives</Link>
           </PtagCopyright>
         </Col>
       </Row>
