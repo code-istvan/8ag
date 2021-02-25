@@ -20,10 +20,10 @@ const Footer = () => {
 
     emailjs
       .sendForm(
-        "service_clzffjq",
-        "template_hwenr7q",
+        process.env.REACT_APP_EMAILJS_FOOTER_SERVICE_KEY,
+        process.env.REACT_APP_EMAILJS_FOOTER_TEMPLATE_KEY,
         e.target,
-        "user_LcygEOfMq1SIPxoAtl0rC"
+        process.env.REACT_APP_EMAILJS_API_KEY
       )
       .then(
         (result) => {

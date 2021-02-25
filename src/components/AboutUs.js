@@ -24,17 +24,17 @@ const AboutUs = () => {
           <Row>
             <Col>
               <PaddingU>
-                <li>a fő hangsúlyt a közvetlen, gyakorlati oktatásra helyezzük rendezvények, workshopok és tematikus tréningek tartásával;</li>
-                <li>idegen nyelven megjelent szakirodalom fordítása és terjesztése;</li>
-                <li>a jóga gyakorlásával, vagy elméletével összefüggő eredeti szerzői művek létrehozásának és terjesztésének támogatása;</li>
-                <li>a jóga iránt érdeklődést és elkötelezettséget mutató, de anyagi körülményeik miatt a gyakorlás elmélyítésére, 
-                  vagy a szakirodalom beszerzésére megfelelő lehetőségekkel nem bíró tanítványok segítése, számukra szisztematikus, ingyenes jógaoktatási rendszer kiépítése;</li>
-                <li>konferenciák, előadások szervezése és megtartása neves hazai és külföldi szakemberek részvételével, 
-                egyéb eszmecserék tartása a védikus kultúra és a jóga elméleti-filozófiai aspektusainak megismertetésére, mely elősegíti a jógikus életmód kialakítását;</li>
-                <li>jóga szakkönyvtár létrehozása;</li>
-                <li>a jógikus életmód iránt érdeklődők számára rendszeres összejövetelek, eszmecserék lehetőségének kialakítása klubszerű működési formában;</li>
-                <li>ösztöndíjak, külföldi tréningek és/vagy tanulmányok támogatása, és/vagy külföldi szaktekintélyek Magyarországra látogatásának megszervezése 
-                és finanszírozása a fentebb megfogalmazott célok megvalósításával összefüggésben.</li>
+                <ul>
+                  <li>a fő hangsúlyt a közvetlen, gyakorlati oktatásra helyezzük rendezvények, workshopok és tematikus tréningek tartásával;</li>
+                  <li>idegen nyelven megjelent szakirodalom fordítása és terjesztése;</li>
+                  <li>a jóga gyakorlásával, vagy elméletével összefüggő eredeti szerzői művek létrehozásának és terjesztésének támogatása;</li>
+                  <li>a jóga iránt érdeklődést és elkötelezettséget mutató, de anyagi körülményeik miatt a gyakorlás elmélyítésére, vagy a szakirodalom beszerzésére megfelelő lehetőségekkel nem bíró tanítványok segítése, számukra szisztematikus, ingyenes jógaoktatási rendszer kiépítése;</li>
+                  <li>konferenciák, előadások szervezése és megtartása neves hazai és külföldi szakemberek részvételével, egyéb eszmecserék tartása a védikus kultúra és a jóga elméleti-filozófiai aspektusainak megismertetésére, mely elősegíti a jógikus életmód kialakítását;</li>
+                  <li>jóga szakkönyvtár létrehozása;</li>
+                  <li>a jógikus életmód iránt érdeklődők számára rendszeres összejövetelek, eszmecserék lehetőségének kialakítása klubszerű működési formában;</li>
+                  <li>ösztöndíjak, külföldi tréningek és/vagy tanulmányok támogatása, és/vagy külföldi szaktekintélyek Magyarországra látogatásának megszervezése 
+                  és finanszírozása a fentebb megfogalmazott célok megvalósításával összefüggésben.</li>
+                </ul>
                 </PaddingU>
             </Col>
           </Row>
