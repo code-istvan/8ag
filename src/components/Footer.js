@@ -122,7 +122,7 @@ const Footer = () => {
               required
             ></input>
             <div id="lol"></div>
-            <div id="lol2"></div>
+            {/* <div id="lol2"></div> */}
           </form>
         </Col>
         <Col sm>

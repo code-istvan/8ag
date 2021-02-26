@@ -9,7 +9,7 @@ const mainimage = () => {
   return (
     <Image
       id="imagecollapse"
-      src={window.innerWidth > 768 ? pic : picSmall}
+           src={window.innerWidth > 768 ? pic : picSmall}
       width="2000"
       fluid
     />
