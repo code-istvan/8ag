@@ -1,26 +1,15 @@
-import React from 'react';
-import emailjs from 'emailjs-com';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import GoogleMap from '../components/GoogleMap';
-import ButtonInputStyle from '../components/StyledComponents/ButtonInputStyle';
-import ReactDOM from 'react-dom';
-import './Kapcsolat.css';
+import React from "react";
+import emailjs from "emailjs-com";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import GoogleMap from "../components/GoogleMap";
+import ButtonInputStyle from "../components/StyledComponents/ButtonInputStyle";
+import ReactDOM from "react-dom";
+import "./Kapcsolat.css";
 import { Helmet } from "react-helmet";
 
-const inputClick2 = () => {
-  ReactDOM.render(
-    <React.Fragment>
-      <ButtonInputStyle type="submit" value="Küldés"></ButtonInputStyle> 
-      <input type="checkbox" id="gdpr" name="gdpr" value="true" required></input>
-      <label for="gdpr">Megismertem és elfogadom az Adatvédelmi Tájékoztatóban foglaltakat</label>
-      <p>Ha az üzeneted rendben megérkezett hozzánk, rendszerünk automata visszaigazolást küld részedre. Ha nem találod a visszaigazolást nézd meg a spam/kéretlen mappádban is.</p><br />
-    </React.Fragment>,
-    document.getElementById('lol2'))
-};
-
-export default function Kapcsolat() {
+const Kapcsolat = () => {
   function sendEmail(e) {
     e.preventDefault();
 
@@ -33,6 +22,8 @@ export default function Kapcsolat() {
       )
       .then(
         (result) => {
+          e.target.value = "";
+          inputClick2(e);
           console.log(result.text);
         },
         (error) => {
@@ -41,12 +32,38 @@ export default function Kapcsolat() {
       );
     e.target.reset();
   }
-  
+
+  const inputClick2 = (e) => {
+    e.target.value
+      ? ReactDOM.render(
+          <React.Fragment>
+            <ButtonInputStyle type="submit" value="Küldés"></ButtonInputStyle>
+            <input
+              type="checkbox"
+              id="gdpr"
+              name="gdpr"
+              value="true"
+              required
+            ></input>
+            <label for="gdpr">
+              Megismertem és elfogadom az Adatvédelmi Tájékoztatóban foglaltakat
+            </label>
+            <p>
+              Ha az üzeneted rendben megérkezett hozzánk, rendszerünk automata
+              visszaigazolást küld részedre. Ha nem találod a visszaigazolást
+              nézd meg a spam/kéretlen mappádban is.
+            </p>
+            <br />
+          </React.Fragment>,
+          document.getElementById("lol2")
+        )
+      : ReactDOM.render("", document.getElementById("lol2"));
+  };
+
   return (
-  
-   <form className="contact-form" onSubmit={sendEmail}>
-     <GoogleMap />
-      <Container>
+    <form className="contact-form" onSubmit={sendEmail}>
+      <GoogleMap />
+      <Container className="kapcsolatContainer">
         <Helmet>
           <title>Kapcsolat - Nyolcág</title>
         </Helmet>
@@ -57,20 +74,42 @@ export default function Kapcsolat() {
         </Row>
         <Row>
           <Col sm={4}>
-            <input type="text" name="user_name" placeholder="Feladó neve*" className="InputMassage" autoComplete="off" onChange={inputClick2} required />
-            <input type="email" name="user_email" placeholder="E-mail cím*" className="InputMassage1" autoComplete="off" onChange={inputClick2} required />
+            <input
+              type="text"
+              name="user_name"
+              placeholder="Feladó neve*"
+              className="InputMassage"
+              autoComplete="off"
+              onChange={inputClick2}
+              required
+            />
+            <input
+              type="email"
+              name="user_email"
+              placeholder="E-mail cím*"
+              className="InputMassage1"
+              autoComplete="off"
+              onChange={inputClick2}
+              required
+            />
           </Col>
           <Col sm={8}>
-            <textarea name="message" placeholder="Üzenet*" className="TextAreaStyle" autoComplete="off" onChange={inputClick2} required />
+            <textarea
+              name="message"
+              placeholder="Üzenet*"
+              className="TextAreaStyle"
+              autoComplete="off"
+              onChange={inputClick2}
+              required
+            />
           </Col>
-        </Row>  
+        </Row>
         <Row>
           <Col id="lol2"></Col>
         </Row>
       </Container>
-      </form>
-      
+    </form>
   );
-}
+};
 
-
+export default Kapcsolat;

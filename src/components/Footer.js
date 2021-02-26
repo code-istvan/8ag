@@ -13,8 +13,7 @@ import instagram_blue from "..//pics/instagram_blue.svg";
 import messenger_blue from "..//pics/messenger_blue.svg";
 import telegram_blue from "..//pics/telegram_blue.svg";
 import ReactDOM from "react-dom";
-import Link from '../components/StyledComponents/Link';
-
+import Link from "../components/StyledComponents/Link";
 
 const Footer = () => {
   function sendEmail(e) {
@@ -47,7 +46,8 @@ const Footer = () => {
             <input type="submit" value="KÜLDÉS" id="buttonstyle"></input>
             <br />
             <label>
-              <input type="checkbox" required /> Megismertem és elfogadom az Adatvédelmi Tájékoztatóban foglaltakat
+              <input type="checkbox" required /> Megismertem és elfogadom az
+              Adatvédelmi Tájékoztatót, hozzájárulok e-mail címem kezeléséhez.
             </label>
           </React.Fragment>,
           document.getElementById("lol")
@@ -142,7 +142,10 @@ const Footer = () => {
         <Col className="backgroundColor2">
           <PtagCopyright>
             Copyright© 2015-{new Date().getFullYear()} Nyolcágú Jóga Alapítvány
-            | Designed by <Link href="https://omworks.hu" target="_blank">OM_Works_Yoga_Creatives</Link>
+            | Designed by{" "}
+            <Link href="https://omworks.hu" target="_blank">
+              OM_Works_Yoga_Creatives
+            </Link>
           </PtagCopyright>
         </Col>
       </Row>
