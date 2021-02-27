@@ -46,7 +46,8 @@ const Kapcsolat = () => {
               required
             ></input>
             <label for="gdpr">
-              Megismertem és elfogadom az Adatvédelmi Tájékoztatóban foglaltakat
+              Megismertem és elfogadom az Adatvédelmi Tájékoztatót, hozzájárulok
+              személyes adataim kezeléséhez
             </label>
             <p>
               Ha az üzeneted rendben megérkezett hozzánk, rendszerünk automata

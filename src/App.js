@@ -1,37 +1,38 @@
-import React, { useEffect } from 'react';
-import './App.css';
-import Navbar8 from './components/Navbar8';
-import Footer from './components/Footer';
-import Mainimage from './components/Image';
+import React, { useEffect } from "react";
+import "./App.css";
+import Navbar8 from "./components/Navbar8";
+import Footer from "./components/Footer";
+import Mainimage from "./components/Image";
 //Router
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route } from "react-router-dom";
 // Import Pages
-import Fooldal from './pages/Fooldal';
-import EgySzazalek from './pages/EgySzazalek';
-import Kapcsolat from './pages/Kapcsolat';
-import Projekt from './pages/Projekt';
-import Projektjeink from './pages/Projektjeink';
-import Uvegzseb from './pages/Uvegzseb';
-import {Helmet} from "react-helmet";
-import ReactGA from 'react-ga';
+import Fooldal from "./pages/Fooldal";
+import EgySzazalek from "./pages/EgySzazalek";
+import Kapcsolat from "./pages/Kapcsolat";
+import Projekt from "./pages/Projekt";
+import Projektjeink from "./pages/Projektjeink";
+import Uvegzseb from "./pages/Uvegzseb";
+import { Helmet } from "react-helmet";
+import ReactGA from "react-ga";
 // import RouteChangeTracker from './components/RouteChangeTracker';
 
-
-const App=()=> {
-
+const App = () => {
   useEffect(() => {
-    ReactGA.initialize('UA-190644138-1');
-    // To Report Page View 
+    ReactGA.initialize("UA-190644138-1");
+    // To Report Page View
     ReactGA.pageview(window.location.pathname + window.location.search);
     // ReactGA.pageview(window.location.pathname + window.location.search);
-  }, [])
+  }, []);
 
   return (
     <div className="App">
       <Helmet>
-          <meta charSet="utf-8" />
-          <title>Nyolcágú Jóga Alapítvány</title>
-          <meta name="description" content="Nyolcágú Jóga Alapítvány honlapja" />
+        <meta charSet="utf-8" />
+        <title>Nyolcágú Jóga Alapítvány</title>
+        <meta
+          name="description"
+          content="Nyolcágú Jóga Alapítvány honlapja Az Alapítvány célja, hogy a jóga elméletét és gyakorlatát minél szélesebb körben és folyamatosan népszerűsítse Magyarországon. Az Indiából eredeztethető jóga már évezredek óta segíti az embereket a testi és lelki egészség elérésében és megőrzésében. "
+        />
       </Helmet>
       <Navbar8 />
       <Switch>
@@ -62,7 +63,6 @@ const App=()=> {
       <Footer />
     </div>
   );
-}
-
+};
 
 export default App;

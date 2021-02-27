@@ -4,12 +4,12 @@ import picSmall from "..//pics/landing_img_small.jpg";
 import Image from "react-bootstrap/Image";
 import "./image.css";
 
-
 const mainimage = () => {
   return (
     <Image
       id="imagecollapse"
-           src={window.innerWidth > 768 ? pic : picSmall}
+      src={window.innerWidth > 768 ? pic : picSmall}
+      alt="Yoga in Mysore"
       width="2000"
       fluid
     />
