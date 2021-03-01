@@ -7,6 +7,7 @@ import GoogleMap from "../components/GoogleMap";
 import ButtonInputStyle from "../components/StyledComponents/ButtonInputStyle";
 import ReactDOM from "react-dom";
 import "./Kapcsolat.css";
+// import Checkbox from "../components/Checkbox";
 import { Helmet } from "react-helmet";
 
 const Kapcsolat = () => {
