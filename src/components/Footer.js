@@ -47,7 +47,8 @@ const Footer = () => {
             <br />
             <label>
               <input type="checkbox" required /> Megismertem és elfogadom az
-              Adatvédelmi Tájékoztatót, hozzájárulok e-mail címem kezeléséhez.
+              <Link href="/adatvedelem"> Adatvédelmi tájékoztató</Link>,
+              hozzájárulok e-mail címem kezeléséhez.
             </label>
           </React.Fragment>,
           document.getElementById("lol")
@@ -128,7 +129,7 @@ const Footer = () => {
         <Col sm>
           <H6Tag>ADATVÉDELEM</H6Tag>
           <p>
-            Adatvédelmi tájékoztató
+            <Link href="/adatvedelem">Adatvédelmi tájékoztató</Link>
             <br />
             Sütik
             <br />

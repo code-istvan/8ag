@@ -9,6 +9,7 @@ import ReactDOM from "react-dom";
 import "./Kapcsolat.css";
 // import Checkbox from "../components/Checkbox";
 import { Helmet } from "react-helmet";
+import Link from "../components/StyledComponents/Link";
 
 const Kapcsolat = () => {
   function sendEmail(e) {
@@ -47,8 +48,9 @@ const Kapcsolat = () => {
               required
             ></input>
             <label for="gdpr">
-              Megismertem és elfogadom az Adatvédelmi Tájékoztatót, hozzájárulok
-              személyes adataim kezeléséhez
+              Megismertem és elfogadom az{" "}
+              <Link href="/adatvedelem"> Adatvédelmi tájékoztató</Link>,
+              hozzájárulok személyes adataim kezeléséhez
             </label>
             <p>
               Ha az üzeneted rendben megérkezett hozzánk, rendszerünk automata

@@ -11,6 +11,7 @@ import EgySzazalek from "./pages/EgySzazalek";
 import Kapcsolat from "./pages/Kapcsolat";
 import Projekt from "./pages/Projekt";
 import Projektjeink from "./pages/Projektjeink";
+import Adatvedelem from "./pages/Adatvedelem";
 import Uvegzseb from "./pages/Uvegzseb";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";
@@ -58,6 +59,9 @@ const App = () => {
         </Route>
         <Route path="/kapcsolat">
           <Kapcsolat />
+        </Route>
+        <Route path="/adatvedelem">
+          <Adatvedelem />
         </Route>
       </Switch>
       <Footer />
