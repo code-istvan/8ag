@@ -10,7 +10,7 @@ import Link from "../components/StyledComponents/Link";
 
 const Fooldal = () => {
   return (
-    <Container>
+    <Container className="maincontainer">
       <h1>Nyolcágú jóga alapítvány</h1>
       <Row>
         <Col>

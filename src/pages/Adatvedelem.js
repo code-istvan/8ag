@@ -8,7 +8,7 @@ import "./adatvedelem.css";
 
 const Adatvedelem = () => {
   return (
-    <Container fluid className="maincontainer">
+    <Container className="maincontainer">
       <Helmet>
         <title>Adatvédelem - Nyolcág</title>
       </Helmet>
@@ -75,11 +75,6 @@ const Adatvedelem = () => {
             Aenean sollicitudin sapien a tincidunt venenatis. Nullam elementum
             pretium ornare. Maecenas tincidunt finibus sollicitudin.
           </PaddingP>
-        </Col>
-      </Row>
-      <Row className="justify-content-md-center">
-        <Col className="justify">
-          <p>Teszt</p>
         </Col>
       </Row>
     </Container>

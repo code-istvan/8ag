@@ -1,12 +1,12 @@
 .maincontainer {
-    margin-bottom: 15px;
+  margin-bottom: 20px !important;
 }
 
 .firstline {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 h1 {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

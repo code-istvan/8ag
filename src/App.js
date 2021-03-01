@@ -61,6 +61,7 @@ const App = () => {
           <Kapcsolat />
         </Route>
         <Route path="/adatvedelem">
+          <Mainimage />
           <Adatvedelem />
         </Route>
       </Switch>
