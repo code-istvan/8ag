@@ -6,3 +6,7 @@ h1 {
 .maincontainer {
   margin-bottom: 20px;
 }
+
+.underline {
+  text-decoration: underline;
+}

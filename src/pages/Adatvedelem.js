@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
+import Link from "../components/StyledComponents/Link";
 import "./adatvedelem.css";
 
 const Adatvedelem = () => {
@@ -20,60 +21,106 @@ const Adatvedelem = () => {
       <Row>
         <Col>
           <PaddingP>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            eu quam eu dui hendrerit aliquam. Vestibulum lectus elit, congue ac
-            elit eu, lacinia tincidunt nunc. Suspendisse lobortis convallis
-            tristique. In et euismod nisi, at pharetra enim. Curabitur pulvinar,
-            diam at ornare dignissim, mi risus egestas ligula, ut dapibus nunc
-            lectus vel sapien. Cras velit dui, fermentum id augue nec,
-            consectetur laoreet nisl. Aliquam a ullamcorper ipsum. Duis non nisi
-            tristique, dapibus urna id, cursus nibh. Praesent arcu nisl, congue
-            sit amet ex nec, fermentum eleifend mauris. In eu orci interdum,
-            interdum orci ac, fermentum lacus. Nulla molestie odio eu sapien
-            elementum, ac dictum ante rutrum. Pellentesque at vehicula turpis,
-            vitae fringilla velit. Suspendisse dui elit, pulvinar non fermentum
-            vitae, molestie sollicitudin felis. Nam et euismod nisi.
-            Pellentesque mollis sagittis felis, quis pretium lorem iaculis a.
-            Nunc ac magna ac elit laoreet sodales. Sed pellentesque ornare nunc
-            et cursus. Curabitur venenatis varius est eu dapibus. Aenean non
-            neque nec lectus sagittis venenatis. Orci varius natoque penatibus
-            et magnis dis parturient montes, nascetur ridiculus mus. Vivamus
-            tincidunt dolor quis ipsum lobortis, vel congue arcu dapibus.
-            Curabitur vel faucibus augue, nec viverra orci. Duis sed semper
-            lectus, vitae porttitor dolor. Proin sollicitudin sapien mi, vitae
-            laoreet justo vulputate nec. Quisque neque ligula, consectetur a
-            arcu nec, facilisis venenatis arcu. Praesent mollis turpis
-            consequat, luctus est sit amet, cursus ex. Maecenas vel pretium
-            nisl. Etiam consectetur fermentum diam a laoreet. Etiam eu lectus
-            mauris. Sed congue turpis risus, ac tempor nibh ornare vel.
-            Curabitur at ante semper, congue arcu nec, sollicitudin elit. Nulla
-            non aliquam lectus. Curabitur at aliquam eros, id consequat nunc.
-            Donec pretium varius elementum. Mauris nec rhoncus metus, non
-            gravida velit. Donec dui nisl, pharetra eget euismod ut, mollis nec
-            arcu. Nullam molestie, dui in sagittis auctor, urna dui ullamcorper
-            arcu, id sodales metus tellus sit amet dui. Aenean erat nulla,
-            sollicitudin sit amet nunc eu, viverra maximus eros. Vestibulum
-            maximus lorem neque, vitae lobortis odio venenatis id. Nam volutpat
-            pulvinar augue, ut tincidunt nibh mollis ac. Aenean sit amet dictum
-            justo. Etiam mattis turpis a felis lobortis viverra. Ut in hendrerit
-            metus. Praesent efficitur tincidunt lacus. Cras tincidunt
-            ullamcorper augue eget porttitor. Nam iaculis condimentum mauris.
-            Vestibulum blandit in nulla sit amet sodales. Curabitur sollicitudin
-            tempor neque, in vulputate ex tincidunt non. Etiam vitae commodo
-            nisl, vel imperdiet tortor. Aenean accumsan quam augue, sit amet
-            auctor nunc fermentum at. Vivamus commodo mollis lorem eleifend
-            tempor. Vestibulum orci risus, ornare quis felis et, pellentesque
-            ornare risus. Duis fermentum non erat ac lacinia. Sed fringilla nunc
-            ut finibus condimentum. Donec iaculis sed felis vitae malesuada.
-            Etiam at mi ornare, vulputate ante sit amet, interdum urna. Donec
-            sed molestie magna. Pellentesque habitant morbi tristique senectus
-            et netus et malesuada fames ac turpis egestas. Donec vitae metus ex.
-            Maecenas congue id nisi nec tincidunt. Praesent tellus libero,
-            egestas sit amet viverra vel, bibendum at massa. Nunc scelerisque
-            magna ut molestie finibus. Maecenas volutpat, lectus a varius
-            venenatis, quam leo maximus risus, ut auctor risus quam vel ligula.
-            Aenean sollicitudin sapien a tincidunt venenatis. Nullam elementum
-            pretium ornare. Maecenas tincidunt finibus sollicitudin.
+            <h4>Preambulum</h4>
+            <p>
+              A jelen tájékoztató („<strong>Adatvédelmi Tájékoztató</strong>”)
+              célja, hogy rögzítse a <strong>Nyolcágú Jóga Alapítvány</strong>{" "}
+              (székhely: 1132 Budapest, Visegrádi u. 80/A 8/2.; nyilvántartási
+              szám: 01-09-879437; az „<strong>Alapítvány</strong>”), mint a
+              www.nyolcag.hu honlap („Honlap”) tulajdonosa által alkalmazott
+              adatvédelmi és adatkezelési elveket, amelyet az Alapítvány mint
+              adatkezelő magára nézve kötelező erővel ismer el. Jelen
+              Tájékoztató a Honlapon a felhasználók által megadott személyes
+              adatok kezelésének elveit tartalmazza, egyben tájékoztatást nyújt
+              az érintettek részére személyes adataik kezeléséről. Célja
+              továbbá, hogy az Alapítvány részére juttatott pénzbeli támogatások
+              adatkezelésével kapcsolatos tájékoztatást az érintettek
+              rendelkezésére bocsássa.
+            </p>
+            <p>
+              A Tájékoztató rendelkezései és tartalma az Európai Parlament és a
+              Tanács 2016/679 Rendeletében („<strong>GDPR</strong>”)
+              foglaltakon, valamint az információs önrendelkezési jogról és az
+              információszabadságról szóló 2011. évi CXII. törvény („
+              <strong>Infotv.</strong>”) rendelkezésein alapul.
+            </p>
+            <h4>Az adatkezelő adatai</h4>
+            <p>
+              Az Ön személyes adatainak kezelése szempontjából az Alapítvány az
+              adatkezelő, azaz az Alapítvány felelős az Ön személyes adatainak
+              jogszerű kezeléséért.
+            </p>
+            <p>
+              Az alábbi elérhetőségeken veheti fel velünk a kapcsolatot:
+              <br />
+              <strong>Adatkezelő neve:</strong> Nyolcágú Jóga Alapítvány
+              <br />
+              <strong>Postacím:</strong> 1132 Budapest, Visegrádi u. 80/A 8/2.
+              <br />
+              <strong>Nyilvántartási szám:</strong> 01-09-879437
+              <br />
+              <strong>E-mail cím:</strong> namaste (kukac) nyolcag (pont) hu
+              <br />
+              <strong>Honlap:</strong>{" "}
+              <Link href="https://nyolcag.hu">nyolcag.hu</Link>
+              <br />
+            </p>
+            <h4 className="underline">I. Honlapra vonatkozó adatkezelés</h4>
+            <h4>
+              1. Az adatkezelés rövid bemutatása az egyes adatkezelési
+              folyamatok szintjén
+            </h4>
+            <ul>
+              <li>
+                <h5>Cookie-k (Sütik)</h5>
+              </li>
+            </ul>
+            <p>
+              Az Alapítvány a testre szabott kiszolgálás érdekében a felhasználó
+              számítógépén kis adatcsomagot (ún. „cookie”-t) helyez el. A cookie
+              célja az adott oldal minél magasabb színvonalú működésének
+              biztosítása, személyre szabott szolgáltatások biztosítása, a
+              felhasználói élmény növelése. A cookie-t a felhasználó képes
+              törölni saját számítógépéről, illetve beállíthatja böngészőjét,
+              hogy a cookie-k alkalmazását tiltsa. A cookie-k alkalmazásának
+              tiltásával a felhasználó tudomásul veszi, hogy cookie nélkül az
+              adott oldal működése nem teljes értékű.
+            </p>
+            <ul>
+              <li>
+                <h5>Hírlevél</h5>
+              </li>
+            </ul>
+            <p>
+              A hírlevél-szolgáltatás nyújtása érdekében az Alapítvány személyes
+              adatot (e-mail címet) vesz fel Öntől. Az e-mail cím rögzítése
+              elektronikusan történik oly módon, hogy az erre szolgáló panelt a
+              felhasználó kitölti, a megjelenő checkbox kipipálásával elfogadja
+              az Adatvédelmi Tájékoztatót és egyúttal hozzájárulását adja ahhoz,
+              hogy az Alapítvány az e-mail címét Hírlevél küldése céljából
+              kezelje, majd a küldés gombra kattint.
+            </p>
+            <ul>
+              <li>
+                <h5>Kapcsolatfelvétel</h5>
+              </li>
+            </ul>
+            <p>
+              Az Alapítvány a Honlapon általános kapcsolatfelvétel, illetve
+              esetlegesen felmerülő kérdések / kérések megválaszolása céljából
+              „Kapcsolat” menüpont alatt üzenetküldési lehetőséget biztosít a
+              felhasználók részére, amelynek során az érintett a
+              kapcsolatfelvételhez szükséges személyes adatait (nevét, e-mail
+              címét) köteles megadni. A név, e-mail cím rögzítése elektronikusan
+              történik oly módon, hogy az erre szolgáló panelt a felhasználó
+              kitölti, a megjelenő checkbox kipipálásával elfogadja az
+              Adatvédelmi Tájékoztatót és egyúttal hozzájárulását adja ahhoz,
+              hogy az Alapítvány nevét és e-mail címét kapcsolatfelvétel,
+              valamint üzenet küldése céljából kezelje, majd a küldés gombra
+              kattint.
+            </p>
+
+            <strong></strong>
           </PaddingP>
         </Col>
       </Row>
