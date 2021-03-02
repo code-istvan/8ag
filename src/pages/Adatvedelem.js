@@ -5,6 +5,8 @@ import Col from "react-bootstrap/Col";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import Link from "../components/StyledComponents/Link";
+import AdatvedelemTable from "../components/AdatvedelemTable";
+import AdatvedelemTable1 from "../components/AdatvedelemTable1";
 import "./adatvedelem.css";
 
 const Adatvedelem = () => {
@@ -66,10 +68,12 @@ const Adatvedelem = () => {
               <br />
             </p>
             <h4 className="underline">I. Honlapra vonatkozó adatkezelés</h4>
+            <br />
             <h4>
               1. Az adatkezelés rövid bemutatása az egyes adatkezelési
               folyamatok szintjén
             </h4>
+            <br />
             <ul>
               <li>
                 <h5>Cookie-k (Sütik)</h5>
@@ -120,6 +124,7 @@ const Adatvedelem = () => {
               kattint.
             </p>
             <h4>2. Az adatkezelés jogalapja</h4>
+            <br />
             <p>
               A Honlapon keresztül felvett, illetve ott közzétett személyes
               adatok kezelésének jogalapja minden esetben a GDPR 6. cikk (1)
@@ -139,12 +144,15 @@ const Adatvedelem = () => {
               3. Az általunk gyűjtött személyes adatok, a jogalap, a cél és az
               adatmegőrzési idő megjelölésével <br />
             </h4>
-            ..................Ide jon a tablazat...................
+            <br />
+            <AdatvedelemTable />
             <br />
             <h4 className="underline">
               II. Adományozásra vonatkozó adatkezelés
             </h4>
+            <br />
             <h4>1. Az adományozásra vonatkozó egyes adatkezelési esetek</h4>
+            <br />
             <ul>
               <li>
                 <h5>Banki átutalás</h5>
@@ -177,18 +185,23 @@ const Adatvedelem = () => {
               hozzájárulását bármikor visszavonhatja az namaste (kukac) nyolcag
               (pont) hu e-mail címre küldött, ez irányú kérésével.
             </p>
+            <br />
             <h4>
               2. Az általunk gyűjtött személyes adatok, a jogalap és a cél és az
               adatmegőrzési idő megjelölésével
             </h4>
-            ..................Ide jon a tablazat 2...................
+            <br />
+            <AdatvedelemTable1 />
+            <br />
             <h4 className="underline">
               III. Az Ön jogai és jogorvoslati lehetőségei
             </h4>
+            <br />
             <h4>
               1. Milyen jogai vannak Önnek, mint Érintettnek az adataival
               kapcsolatban
             </h4>
+            <br />
             <ul>
               <li>
                 <h5>Tájékoztatáshoz és hozzáféréshez való jog</h5>
@@ -259,7 +272,226 @@ const Adatvedelem = () => {
               Az Alapítvány késedelem nélkül törli az érintett személyes
               adatokat, amennyiben:
             </p>
-            <strong></strong>
+            <ul className="abc">
+              <li>
+                <p>
+                  már nincs szükség a személyes adatokra a meghatározott
+                  adatkezelési folyamatok lefolytatása céljából;
+                </p>
+              </li>
+              <li>
+                <p>a személyes adatok kezelése jogellenes;</p>
+              </li>
+              <li>
+                <p>
+                  Alapítványunkra vonatkozó jogi kötelezettség teljesítése okán
+                  szükséges az adatok törlése;
+                </p>
+              </li>
+              <li>
+                <p>
+                  a 16. életévét be nem töltött gyermek adatainak kezeléséhez a
+                  hozzájárulást a gyermek feletti szülői felügyeletet gyakorló
+                  személy nem adta meg, illetve nem engedélyezte; (Amennyiben az
+                  Alapítvány tudomására jut, hogy 16 év alatti személlyel került
+                  kapcsolatba, úgy ésszerű erőfeszítést tesz a szülői
+                  felügyeleti jogot gyakorló beleegyezése meglétének
+                  ellenőrzésére, illetve ha 16 év alatti személytől a törvényes
+                  képviselő hozzájárulása nélkül hozzájárulás-köteles személyes
+                  adatok kerültek hozzá, a lehető leghamarabb megteszi az adatok
+                  törléséhez szükséges lépéseket.)
+                </p>
+              </li>
+              <li>
+                <p>
+                  Ön visszavonja az adatkezelés alapját képező hozzájárulását és
+                  az adatkezelésnek nincsen más jogalapja.
+                </p>
+              </li>
+            </ul>
+            <p>
+              Ön is kérheti tőlünk a személyes adatainak törlését a részünkre
+              korábban megadott adatkezelési hozzájárulás visszavonásával. Ebben
+              az esetben ugyanakkor a szolgáltatásunk további nyújtását
+              megtagad(hat)juk. A személyes adatokat törlés helyett zároljuk, ha
+              Ön ezt kéri, vagy, ha feltételezhető, hogy a törlés
+              befolyásolhatja az Ön jogos érdekeit.
+            </p>
+            <ul>
+              <li>
+                <h5>Korlátozáshoz való jog</h5>
+              </li>
+            </ul>
+            <p>
+              Az adatkezelés korlátozására abban az esetben kerülhet sor,
+              amennyiben:
+            </p>
+            <ul className="abc">
+              <li>
+                <p>
+                  Ön vitatja adatainak pontosságát; ebben az esetben az adatok
+                  helyességének megállapításáig terjedő időtartamra az
+                  Alapítvány korlátozza személyes adatainak kezelését;
+                </p>
+              </li>
+              <li>
+                <p>
+                  az adatkezelés jogellenes és Ön törlés helyett a felhasználás
+                  korlátozását kéri;
+                </p>
+              </li>
+              <li>
+                <p>
+                  az Alapítványnak már nincs szüksége az adatokra, de Ön igényli
+                  azokat jogi igények előterjesztéséhez.
+                </p>
+              </li>
+            </ul>
+            <p>
+              Ha az adatkezelés korlátozás alá esik, az ilyen személyes adatokat
+              a tárolás kivételével csak a következő esetekben lehet jogszerűen
+              kezelni:
+            </p>
+            <ul className="abc">
+              <li>
+                <p>Ön hozzájárul az adatkezeléshez;</p>
+              </li>
+              <li>
+                <p>
+                  jogi igények érvényesítéséhez szükséges a személyes adatainak
+                  kezelése;
+                </p>
+              </li>
+              <li>
+                <p>
+                  más természetes vagy jogi személy jogainak védelme érdekében
+                  szükségessé válik a személyes adatok kezelése; vagy
+                </p>
+              </li>
+              <li>
+                <p>jogszabály közérdekből elrendeli az adatkezelést.</p>
+              </li>
+            </ul>
+            <p>
+              Ha az adatkezelés korlátozását kérte, a korlátozás feloldásáról
+              Önt az Alapítvány előzetesen tájékoztatja.
+            </p>
+            <ul>
+              <li>
+                <h5>Adathordozhatósághoz való jog</h5>
+              </li>
+            </ul>
+            <p>
+              Ön jogosult arra, hogy az Önre vonatkozó, az Alapítvány
+              rendelkezésére bocsátott személyes adatokat tagolt, széles körben
+              használt, géppel olvasható formátumban (pl. .doc vagy .pdf
+              formátumban) megkapja. Továbbá jogosult arra, hogy ezeket az
+              adatokat egy másik adatkezelőnek továbbítsa anélkül, hogy az
+              Alapítvány ezt akadályozná.
+            </p>
+            <ul>
+              <li>
+                <h5>Mi történik, és mit tehet, ha elutasítjuk a kérelmét?</h5>
+              </li>
+            </ul>
+            <p>
+              Ha az Alapítvány elutasítja az Ön kijavításra, korlátozásra vagy
+              törlésre irányuló kérelmét, a kérelem kézhezvételétől számított
+              egy hónapon belül írásban tájékoztatjuk Önt arról, hogy miért nem
+              tudtuk teljesíteni a kérését, a bírósági jogorvoslati
+              lehetőségeiről, valamint arról, hogy bejelentést tehet a Nemzeti
+              Adatvédelmi és Információszabadság Hatóságnál. Válaszunkat
+              e-mailben küldjük el, ha Ön ebbe beleegyezik.
+            </p>
+            <h4>
+              2. Milyen jogorvoslati lehetőségek állnak az Ön rendelkezésére
+            </h4>
+            <br />
+            <p>
+              Ha az Ön megítélése szerint személyes adatainak kezelése során
+              Alapítványunk megsérti a GDPR rendelkezéseit, úgy Ön, mint
+              érintett jogosult arra, hogy panaszt tegyen egy felügyeleti
+              hatóságnál (azaz az EU bármely tagállama által a GDPR 51. cikke
+              alapján létrehozott közhatalmi szervnél) – különösen az Ön
+              szokásos tartózkodási helye, a munkahelye vagy a feltételezett
+              jogsértés helye szerinti tagállamban. Magyarországon a GDPR 51.
+              cikkében foglalt kritériumoknak megfelelően létrehozott
+              felügyeleti szerv a Nemzeti Adatvédelmi és Információszabadság
+              Hatóság (a továbbiakban: „<strong>NAIH</strong>” vagy „
+              <strong>Hatóság</strong>”). Ennek megfelelően az alábbi pontban a
+              NAIH részére történő panasztétel lehetőségének részleteiről
+              tájékoztatjuk.
+            </p>
+            <ul>
+              <li>
+                <h5>
+                  Bejelentés a Nemzeti Adatvédelmi és Információszabadság
+                  Hatósághoz
+                </h5>
+              </li>
+            </ul>
+            <p>
+              Az adatvédelmi jogszabályok betartását a Nemzeti Adatvédelmi és
+              Információszabadság Hatóság felügyeli. Ha Ön úgy ítéli meg, hogy
+              az adatkezelésünk nem felel meg a vonatkozó jogszabályoknak, vagy
+              ha úgy ítéli meg, hogy ennek közvetlen veszélye fennáll, akkor
+              bejelentést tehet a Hatóságnál a következő elérhetőségeken.
+            </p>
+            <p>
+              <strong>Hatóság neve:</strong> Nemzeti Adatvédelmi és
+              Információszabadság Hatóság
+            </p>
+            <p>
+              <strong>Cím:</strong> 1055 Budapest, Falk Miksa utca 9-11.
+            </p>
+            <p>
+              <strong>Levelezési cím:</strong> 1363 Budapest, Pf. 9.
+            </p>
+            <p>
+              <strong>E-mail cím:</strong> ugyfelszolgalat (kukac) naih (pont)
+              hu
+            </p>
+            <p>
+              <strong>Telefonszám:</strong> +36 1 391 1400
+            </p>
+            <p>
+              <strong>Fax szám: </strong> +36 1 391 1410
+            </p>
+            <p>
+              Adatvédelmi kérdésekkel kapcsolatban további információ található
+              a Hatóság honlapján:{" "}
+              <Link href="http://naih.hu/">http://naih.hu/</Link>
+            </p>
+            <p>
+              Felhívjuk továbbá a figyelmét arra, hogy Alapítványunk köteles a
+              Honlappal kapcsolatos adatvédelmi incidenst (azaz személyes adatok
+              véletlen vagy jogellenes megsemmisítését, elvesztését,
+              megváltoztatását, jogosulatlan közlését vagy az azokhoz való
+              jogosulatlan hozzáférést) indokolatlan késedelem nélkül, és ha
+              lehetséges, legkésőbb 72 órával az után, hogy az adatvédelmi
+              incidens a tudomására jutott, bejelenteni a Hatóságnak. Ha az
+              adatvédelmi incidens valószínűsíthetően magas kockázattal jár az
+              érintettek jogaira és szabadságaira nézve, Alapítványunk
+              indokolatlan késedelem nélkül tájékoztatja Önt, mint érintettet az
+              adatvédelmi incidensről.
+            </p>
+            <ul>
+              <li>
+                <h5>Bírósági jogérvényesítés</h5>
+              </li>
+            </ul>
+            <p>
+              Ön bírósági jogorvoslatra is jogosult, ha megítélése szerint a
+              személyes adatai GDPR-nak nem megfelelő kezelése következtében
+              megsértettük a GDPR szerinti jogait. Az Alapítvánnyal szembeni
+              eljárást az Alapítvány tevékenységi helye szerinti tagállam
+              bírósága előtt kell megindítani. Az ilyen eljárás megindítható az
+              érintett szokásos tartózkodási helye szerinti tagállam bírósága
+              előtt is. Az ilyen peres eljárás Magyarországon a törvényszék
+              hatáskörébe tartozik. A pert az érintett - választása szerint - a
+              lakóhelye vagy tartózkodási helye szerint illetékes törvényszék
+              előtt is megindíthatja.{" "}
+            </p>
           </PaddingP>
         </Col>
       </Row>
