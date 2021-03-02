@@ -90,7 +90,7 @@ const Fooldal = () => {
         <Col md={4}>
           <Card className="cardHover">
             <Card.Header>
-              <b>Adószám:</b>
+              <b>Adószám</b>
             </Card.Header>
             <ListGroup variant="flush">
               <ListGroup.Item>18734373-1-41</ListGroup.Item>
