@@ -3,7 +3,6 @@ import "./App.css";
 import Navbar8 from "./components/Navbar8";
 import Footer from "./components/Footer";
 import Mainimage from "./components/Image";
-import MainimageSmall from "./pics/landing_img_small.jpg";
 //Router
 import { Switch, Route } from "react-router-dom";
 // Import Pages
@@ -35,7 +34,7 @@ const App = () => {
           name="description"
           content="Nyolcágú Jóga Alapítvány honlapja Az Alapítvány célja, hogy a jóga elméletét és gyakorlatát minél szélesebb körben és folyamatosan népszerűsítse Magyarországon. Az Indiából eredeztethető jóga már évezredek óta segíti az embereket a testi és lelki egészség elérésében és megőrzésében. "
         />
-        {/* <meta property="og:image" content={MainimageSmall} /> */}
+        <meta property="og:image" content={Mainimage} />
       </Helmet>
       <Navbar8 />
       <Switch>
