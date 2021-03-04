@@ -7,10 +7,14 @@ import ListGroup from "react-bootstrap/ListGroup";
 import "./fooldal.css";
 import styled from "styled-components";
 import Link from "../components/StyledComponents/Link";
+import { Helmet } from "react-helmet";
 
 const Fooldal = () => {
   return (
     <Container className="maincontainer">
+      <Helmet>
+        <title>Főoldal- Nyolcág</title>
+      </Helmet>
       <h1>Nyolcágú jóga alapítvány</h1>
       <Row>
         <Col>
