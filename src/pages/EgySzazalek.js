@@ -48,8 +48,13 @@ const EgySzazalek = () => {
             <strong>2020</strong>-as évi bevallásban nem tudjátok felajánlani
             adótok 1%-át a Nyolcágú Jóga Alapítványak 🙁{" "}
             <strong>Hálás köszönet mindenkinek aki megpróbálta!</strong> Erről a{" "}
-            <Link href="/projektjeink">listáról</Link> tudtok választani mást
-            helyettünk.
+            <Link
+              href="https://nav.gov.hu/nav/szja1_1/regisztralt_civil_2021"
+              target="_blank"
+            >
+              listáról
+            </Link>{" "}
+            tudtok választani mást helyettünk.
           </Alert>
         </Col>
       </Row>
