@@ -43,7 +43,7 @@ const EgySzazalek = () => {
         <Col className="justify">
           <Alert variant="danger">
             <Alert.Heading>FONTOS INFORMÁCIÓ!</Alert.Heading>
-            2020-03-15. Többen jeleztétek, hogy gond van az 1% felajánlásával.
+            2020-03-05. Többen jeleztétek, hogy gond van az 1% felajánlásával.
             Utánanéztük és valóban sajnos egy technikai “malőr” miatt a{" "}
             <strong>2020</strong>-as évi bevallásban nem tudjátok felajánlani
             adótok 1%-át a Nyolcágú Jóga Alapítványak 🙁{" "}
