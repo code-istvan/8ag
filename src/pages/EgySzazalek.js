@@ -6,6 +6,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Link from "../components/StyledComponents/Link";
 import MyPDF from "../pdfs/egyszazalek.pdf";
+import Alert from "react-bootstrap/Alert";
 import "./egyszazalek.css";
 import { Helmet } from "react-helmet";
 
@@ -38,6 +39,21 @@ const EgySzazalek = () => {
           </p>
         </Col>
       </Row>
+      <Row className="justify-content-md-center">
+        <Col className="justify">
+          <Alert variant="danger">
+            <Alert.Heading>FONTOS INFORMÁCIÓ!</Alert.Heading>
+            2020-03-15. Többen jeleztétek, hogy gond van az 1% felajánlásával.
+            Utánanéztük és valóban sajnos egy technikai “malőr” miatt a{" "}
+            <strong>2020</strong>-as évi bevallásban nem tudjátok felajánlani
+            adótok 1%-át a Nyolcágú Jóga Alapítványak 🙁{" "}
+            <strong>Hálás köszönet mindenkinek aki megpróbálta!</strong> Erről a{" "}
+            <Link href="/projektjeink">listáról</Link> tudtok választani mást
+            helyettünk.
+          </Alert>
+        </Col>
+      </Row>
+
       <Row>
         <Col>
           <Card className="taxnumber">
