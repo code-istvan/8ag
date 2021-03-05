@@ -41,7 +41,7 @@ const EgySzazalek = () => {
       </Row>
       <Row className="justify-content-md-center">
         <Col className="justify">
-          <Alert variant="danger">
+          <Alert variant="primary">
             <Alert.Heading>FONTOS INFORMÁCIÓ!</Alert.Heading>
             2020-03-05. Többen jeleztétek, hogy gond van az 1% felajánlásával.
             Utánanéztük és valóban sajnos egy technikai “malőr” miatt a{" "}
