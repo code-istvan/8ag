@@ -49,7 +49,7 @@ const Kapcsolat = () => {
             ></input>
             <label for="gdpr">
               Megismertem és elfogadom az{" "}
-              <Link href="/adatvedelem"> Adatvédelmi tájékoztató</Link>,
+              <Link href="/adatvedelem"> Adatvédelmi tájékoztatót</Link>,
               hozzájárulok személyes adataim kezeléséhez
             </label>
             <p>

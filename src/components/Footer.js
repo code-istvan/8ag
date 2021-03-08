@@ -47,7 +47,7 @@ const Footer = () => {
             <br />
             <label>
               <input type="checkbox" required /> Megismertem és elfogadom az
-              <Link href="/adatvedelem"> Adatvédelmi tájékoztató</Link>,
+              <Link href="/adatvedelem"> Adatvédelmi tájékoztatót</Link>,
               hozzájárulok e-mail címem kezeléséhez.
             </label>
           </React.Fragment>,
