@@ -15,7 +15,7 @@ import Adatvedelem from "./pages/Adatvedelem";
 import Uvegzseb from "./pages/Uvegzseb";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";
-import picSmall from "..//pics/landing_img_small.jpg";
+import picSmall from "./pics/landing_img_small.jpg";
 // import RouteChangeTracker from './components/RouteChangeTracker';
 
 const App = () => {
@@ -38,6 +38,7 @@ const App = () => {
         <meta property="og:image" content={picSmall} />
         <meta property="og:url" content="https://nyolcag.hu/" />
         <meta property="og:type" content="object" />
+        <meta property="fb:app_id" content="1076431962839514" />
       </Helmet>
       <Navbar8 />
       <Switch>
