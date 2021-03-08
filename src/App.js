@@ -15,6 +15,7 @@ import Adatvedelem from "./pages/Adatvedelem";
 import Uvegzseb from "./pages/Uvegzseb";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";
+import picSmall from "..//pics/landing_img_small.jpg";
 // import RouteChangeTracker from './components/RouteChangeTracker';
 
 const App = () => {
@@ -29,12 +30,14 @@ const App = () => {
     <div className="App">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Nyolcágú Jóga Alapítvány</title>
+        <meta property="og:title" content="Nyolcágú Jóga Alapítvány" />
         <meta
-          name="description"
+          property="og:description"
           content="Nyolcágú Jóga Alapítvány honlapja Az Alapítvány célja, hogy a jóga elméletét és gyakorlatát minél szélesebb körben és folyamatosan népszerűsítse Magyarországon. Az Indiából eredeztethető jóga már évezredek óta segíti az embereket a testi és lelki egészség elérésében és megőrzésében. "
         />
-        <meta property="og:image" content={Mainimage} />
+        <meta property="og:image" content={picSmall} />
+        <meta property="og:url" content="https://nyolcag.hu/" />
+        <meta property="og:type" content="object" />
       </Helmet>
       <Navbar8 />
       <Switch>
