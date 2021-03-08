@@ -58,7 +58,6 @@ const EgySzazalek = () => {
           </Alert>
         </Col>
       </Row>
-
       <Row>
         <Col>
           <Card className="taxnumber">

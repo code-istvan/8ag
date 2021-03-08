@@ -180,10 +180,12 @@ const Adatvedelem = () => {
               </li>
             </ul>
             <p>
-              Amennyiben Ön hozzájárul, nevét és az adományozott összeget vagy
-              csak nevét feltüntetjük honlapunkon az adományozók között. Ön a
-              hozzájárulását bármikor visszavonhatja az namaste (kukac) nyolcag
-              (pont) hu e-mail címre küldött, ez irányú kérésével.
+              Amennyiben Ön a namaste (kukac) nyolcag (pont) hu e-mail címre
+              küldött levelében egy nyilatkozattalhozzájárul, nevét és az
+              adományozott összeget vagy csak nevét feltüntetjük honlapunkon az
+              adományozók között. Ön a hozzájárulását bármikor visszavonhatja az
+              namaste (kukac) nyolcag (pont) hu e-mail címre küldött, ez irányú
+              kérésével.
             </p>
             <br />
             <h4>
