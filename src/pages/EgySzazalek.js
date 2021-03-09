@@ -8,14 +8,17 @@ import Link from "../components/StyledComponents/Link";
 import MyPDF from "../pdfs/egyszazalek.pdf";
 import Alert from "react-bootstrap/Alert";
 import "./egyszazalek.css";
-import { Helmet } from "react-helmet";
+import img from "../pics/landing_img_small.jpg";
+import MetaTags from "../components/MetaTags";
 
 const EgySzazalek = () => {
   return (
     <Container className="maincontainer">
-      <Helmet>
-        <title>1% - Nyolcág</title>
-      </Helmet>
+      <MetaTags
+        title="1% - Nyolcág"
+        img={img}
+        description="Támogasd a jóga népszerűsítését adód 1%-val"
+      />
       <Row>
         <Col>
           <h1>Adó 1%</h1>

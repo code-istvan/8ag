@@ -10,15 +10,17 @@ import DevTooltipPayPal from "../components/DevTooltipPayPal";
 import "./projekt.css";
 import MyPDF2 from "../pdfs/8ag_banki_utalas.pdf";
 import Alert from "react-bootstrap/Alert";
-import { Helmet } from "react-helmet";
-// import styled from 'styled-components';
+import img from "../pics/landing_img_small.jpg";
+import MetaTags from "../components/MetaTags";
 
 const Projekt = () => {
   return (
     <Container className="maincontainer">
-      <Helmet>
-        <title>Projekt támogatás - Nyolcág</title>
-      </Helmet>
+      <MetaTags
+        title="Projekt támogatás - Nyolcág"
+        img={img}
+        description="Projekt finanszírozási lehetőségek"
+      />
       <h1>Projekt támogatás</h1>
       <Row>
         <Col className="firstline">
