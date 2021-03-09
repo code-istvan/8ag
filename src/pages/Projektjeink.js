@@ -20,7 +20,7 @@ const Projectjeink = () => {
           property="og:description"
           content="Nyolcágú Jóga Alapítvány Testing"
         />
-        <meta property="og:image" content={window.location.origin + img} />
+        <meta property="og:image" content={"https://nyolcag.hu" + img} />
         <meta property="og:url" content={window.location.origin} />
         <meta property="og:type" content="object" />
         <meta property="fb:app_id" content="1076431962839514" />
