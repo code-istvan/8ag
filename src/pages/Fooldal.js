@@ -9,21 +9,11 @@ import styled from "styled-components";
 import Link from "../components/StyledComponents/Link";
 import { Helmet } from "react-helmet";
 import img from "../pics/landing_img_small.jpg";
+import MetaTags from "../components/MetaTags";
 
 const Fooldal = () => {
   return (
     <Container className="maincontainer">
-      <Helmet>
-        <meta property="og:title" content="Főoldal- Nyolcág" />
-        <meta
-          property="og:description"
-          content="Nyolcágú Jóga Alapítvány honlapja Az Alapítvány célja, hogy a jóga elméletét és gyakorlatát minél szélesebb körben és folyamatosan népszerűsítse Magyarországon. Az Indiából eredeztethető jóga már évezredek óta segíti az embereket a testi és lelki egészség elérésében és megőrzésében. "
-        />
-        <meta property="og:image" content={"https://nyolcag.hu" + img} />
-        <meta property="og:url" content={window.location.origin} />
-        <meta property="og:type" content="object" />
-        <meta property="fb:app_id" content="1076431962839514" />
-      </Helmet>
       <h1>Nyolcágú jóga alapítvány</h1>
       <Row>
         <Col>
