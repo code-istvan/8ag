@@ -14,17 +14,11 @@ import img from "../pics/Eddie_book.jpg";
 const Projectjeink = () => {
   return (
     <Container>
-      <Helmet>
-        <meta property="og:title" content="Projektjeink - Nyolcág" />
-        <meta
-          property="og:description"
-          content="Nyolcágú Jóga Alapítvány Testing"
-        />
-        <meta property="og:image" content={"https://nyolcag.hu" + img} />
-        <meta property="og:url" content={window.location.origin} />
-        <meta property="og:type" content="object" />
-        <meta property="fb:app_id" content="1076431962839514" />
-      </Helmet>
+      <MetaTags
+        title="Projektjeink - Nyolcág"
+        img={img}
+        description="Nyolcágú Jóga Alapítvány Testing Again"
+      />
       <h1>Projektjeink</h1>
       <Row>
         <Col>
