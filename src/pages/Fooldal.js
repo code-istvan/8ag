@@ -14,6 +14,11 @@ import MetaTags from "../components/MetaTags";
 const Fooldal = () => {
   return (
     <Container className="maincontainer">
+      <MetaTags
+        title="Főoldal- Nyolcág"
+        img={img}
+        description="Nyolcágú Jóga Alapítvány honlapja Az Alapítvány célja, hogy a jóga elméletét és gyakorlatát minél szélesebb körben és folyamatosan népszerűsítse Magyarországon. Az Indiából eredeztethető jóga már évezredek óta segíti az embereket a testi és lelki egészség elérésében és megőrzésében."
+      />
       <h1>Nyolcágú jóga alapítvány</h1>
       <Row>
         <Col>
