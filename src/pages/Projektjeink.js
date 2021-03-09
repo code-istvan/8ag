@@ -8,7 +8,7 @@ import img1 from "..//pics/Eddie_book.jpg";
 import img2 from "..//pics/yo_ve_book.jpg";
 import img3 from "..//pics/how_to_know.jpg";
 import Link from "../components/StyledComponents/Link";
-import img from "../pics/Eddie_book.jpg";
+import img from "../pics/landing_img_small.jpg";
 import MetaTags from "../components/MetaTags";
 
 const Projectjeink = () => {
@@ -17,7 +17,7 @@ const Projectjeink = () => {
       <MetaTags
         title="Projektjeink - Nyolcág"
         img={img}
-        description="Nyolcágú Jóga Alapítvány Testing Again"
+        description="Projektek amin jelenleg dolgozunk"
       />
       <h1>Projektjeink</h1>
       <Row>
