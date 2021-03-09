@@ -24,8 +24,10 @@ const EgySzazalek = () => {
           <h1>Adó 1%</h1>
         </Col>
       </Row>
-      <Row className="justify-content-md-center">
-        <Col className="justify">
+      {/* <Row className="justify-content-md-center">
+        <Col className="justify"> */}
+      <Row>
+        <Col>
           <p>
             Évente mintegy 10 milliárd forintról nem rendelkeznek az adózók. Ne
             hagyd bent az 1 százalékot, inkább add oda a Nyolcágú Jóga
@@ -42,8 +44,10 @@ const EgySzazalek = () => {
           </p>
         </Col>
       </Row>
-      <Row className="justify-content-md-center">
-        <Col className="justify">
+      {/* <Row className="justify-content-md-center">
+        <Col className="justify"> */}
+      <Row>
+        <Col>
           <Alert variant="primary">
             <Alert.Heading>FONTOS INFORMÁCIÓ!</Alert.Heading>
             2020-03-05. Többen jeleztétek, hogy gond van az 1% felajánlásával.
