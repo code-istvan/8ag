@@ -9,7 +9,7 @@ import img2 from "..//pics/yo_ve_book.jpg";
 import img3 from "..//pics/how_to_know.jpg";
 import Link from "../components/StyledComponents/Link";
 import { Helmet } from "react-helmet";
-import picSmall from "./pics/Eddie_book.jpg";
+import img from "../pics/Eddie_book.jpg";
 
 const Projectjeink = () => {
   return (
@@ -20,7 +20,7 @@ const Projectjeink = () => {
           property="og:description"
           content="Nyolcágú Jóga Alapítvány Testing"
         />
-        <meta property="og:image" content={window.location.origin + picSmall} />
+        <meta property="og:image" content={window.location.origin + img} />
         <meta property="og:url" content={window.location.origin} />
         <meta property="og:type" content="object" />
         <meta property="fb:app_id" content="1076431962839514" />
