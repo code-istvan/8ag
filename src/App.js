@@ -13,9 +13,7 @@ import Projekt from "./pages/Projekt";
 import Projektjeink from "./pages/Projektjeink";
 import Adatvedelem from "./pages/Adatvedelem";
 import Uvegzseb from "./pages/Uvegzseb";
-import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";
-import picSmall from "./pics/landing_img_small.jpg";
 // import RouteChangeTracker from './components/RouteChangeTracker';
 
 const App = () => {
@@ -28,18 +26,6 @@ const App = () => {
 
   return (
     <div className="App">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <meta property="og:title" content="Nyolcágú Jóga Alapítvány" />
-        <meta
-          property="og:description"
-          content="Nyolcágú Jóga Alapítvány honlapja Az Alapítvány célja, hogy a jóga elméletét és gyakorlatát minél szélesebb körben és folyamatosan népszerűsítse Magyarországon. Az Indiából eredeztethető jóga már évezredek óta segíti az embereket a testi és lelki egészség elérésében és megőrzésében. "
-        />
-        <meta property="og:image" content={picSmall} />
-        <meta property="og:url" content="https://nyolcag.hu/" />
-        <meta property="og:type" content="object" />
-        <meta property="fb:app_id" content="1076431962839514" />
-      </Helmet>
       <Navbar8 />
       <Switch>
         <Route path="/" exact>
