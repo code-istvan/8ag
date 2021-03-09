@@ -8,8 +8,8 @@ import img1 from "..//pics/Eddie_book.jpg";
 import img2 from "..//pics/yo_ve_book.jpg";
 import img3 from "..//pics/how_to_know.jpg";
 import Link from "../components/StyledComponents/Link";
-import { Helmet } from "react-helmet";
 import img from "../pics/Eddie_book.jpg";
+import MetaTags from "../components/MetaTags";
 
 const Projectjeink = () => {
   return (
