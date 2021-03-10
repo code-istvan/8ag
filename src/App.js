@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "./App.css";
 import Navbar8 from "./components/Navbar8";
 import Footer from "./components/Footer";
-import Mainimage from "./components/Image";
 //Router
 import { Switch, Route } from "react-router-dom";
 // Import Pages
@@ -29,30 +28,24 @@ const App = () => {
       <Navbar8 />
       <Switch>
         <Route path="/" exact>
-          <Mainimage />
           <Fooldal />
         </Route>
         <Route path="/projektjeink">
-          <Mainimage />
           <Projektjeink />
         </Route>
         <Route path="/egyszazalek">
-          <Mainimage />
           <EgySzazalek />
         </Route>
         <Route path="/projekt">
-          <Mainimage />
           <Projekt />
         </Route>
         <Route path="/uvegzseb">
-          <Mainimage />
           <Uvegzseb />
         </Route>
         <Route path="/kapcsolat">
           <Kapcsolat />
         </Route>
         <Route path="/adatvedelem">
-          <Mainimage />
           <Adatvedelem />
         </Route>
       </Switch>

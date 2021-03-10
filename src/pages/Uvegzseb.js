@@ -7,35 +7,39 @@ import UvegzsebKiadas from "../components/UvegzsebKiadas";
 import "./uvegzseb.css";
 import img from "../pics/landing_img_small.jpg";
 import MetaTags from "../components/MetaTags";
+import Mainimage from "../components/Image";
 
 const Uvegzseb = () => {
   return (
-    <Container fluid className="maincontainer">
+    <React.Fragment>
       <MetaTags
         title="Üvegzseb - Nyolcág"
         img={img}
         description="Projektjeink, működésünk cashfloja itt tekinthető meg."
       />
-      <Container>
-        <h1>Üvegzseb</h1>
-        <Row className="justify-content-md-center">
-          <Col className="justify">
-            <p>
-              A Nyolcágú Jóga Alapítvány a bizalom és átláthatóság céljából
-              létrehozta az üvegzseb oldalt. Projektjeink, működésünk cashfloja
-              itt tekinthető meg.
-            </p>
-            <h3>2021-ben beérkezett magán- és intézményi támogatások</h3>
-            <UvegzsebTable />
-            <br />
-            {/* <p>*Az adományozó hozzájárulásának lekérdezése folyamatban van, hogy hozzájárul-e a nevének megjelenéséhez.</p> */}
-            <h3>Kiadásaink 2021-ben</h3>
-            <UvegzsebKiadas />
-            <br />
-          </Col>
-        </Row>
+      <Mainimage />
+      <Container fluid className="maincontainer">
+        <Container>
+          <h1>Üvegzseb</h1>
+          <Row className="justify-content-md-center">
+            <Col className="justify">
+              <p>
+                A Nyolcágú Jóga Alapítvány a bizalom és átláthatóság céljából
+                létrehozta az üvegzseb oldalt. Projektjeink, működésünk
+                cashfloja itt tekinthető meg.
+              </p>
+              <h3>2021-ben beérkezett magán- és intézményi támogatások</h3>
+              <UvegzsebTable />
+              <br />
+              {/* <p>*Az adományozó hozzájárulásának lekérdezése folyamatban van, hogy hozzájárul-e a nevének megjelenéséhez.</p> */}
+              <h3>Kiadásaink 2021-ben</h3>
+              <UvegzsebKiadas />
+              <br />
+            </Col>
+          </Row>
+        </Container>
       </Container>
-    </Container>
+    </React.Fragment>
   );
 };
 

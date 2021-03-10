@@ -8,8 +8,9 @@ import ButtonInputStyle from "../components/StyledComponents/ButtonInputStyle";
 import ReactDOM from "react-dom";
 import "./Kapcsolat.css";
 // import Checkbox from "../components/Checkbox";
-import { Helmet } from "react-helmet";
 import Link from "../components/StyledComponents/Link";
+import seoImage from "../pics/landing_img_small.jpg";
+import MetaTags from "../components/MetaTags";
 
 const Kapcsolat = () => {
   function sendEmail(e) {
@@ -67,10 +68,12 @@ const Kapcsolat = () => {
   return (
     <form className="contact-form" onSubmit={sendEmail}>
       <GoogleMap />
+      <MetaTags
+        title="Kapcsolat - Nyolcág"
+        img={seoImage}
+        description="Kapcsolat - Nyolcág"
+      />
       <Container className="kapcsolatContainer">
-        <Helmet>
-          <title>Kapcsolat - Nyolcág</title>
-        </Helmet>
         <Row>
           <Col>
             <h1>Kapcsolat</h1>
