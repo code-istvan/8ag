@@ -15,7 +15,7 @@ const Fooldal = () => {
   return (
     <React.Fragment>
       <MetaTags
-        title="Főoldal- Nyolcág"
+        title="Főoldal - Nyolcág"
         img={seoImage}
         description="Nyolcágú Jóga Alapítvány honlapja Az Alapítvány célja, hogy a jóga elméletét és gyakorlatát minél szélesebb körben és folyamatosan népszerűsítse Magyarországon. Az Indiából eredeztethető jóga már évezredek óta segíti az embereket a testi és lelki egészség elérésében és megőrzésében."
       />      

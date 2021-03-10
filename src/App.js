@@ -13,6 +13,7 @@ import Projektjeink from "./pages/Projektjeink";
 import Adatvedelem from "./pages/Adatvedelem";
 import Uvegzseb from "./pages/Uvegzseb";
 import ReactGA from "react-ga";
+import NotFound from "./components/NotFound";
 // import RouteChangeTracker from './components/RouteChangeTracker';
 
 const App = () => {
@@ -47,6 +48,9 @@ const App = () => {
         </Route>
         <Route path="/adatvedelem">
           <Adatvedelem />
+        </Route>
+        <Route path="*">
+          <NotFound />
         </Route>
       </Switch>
       <Footer />

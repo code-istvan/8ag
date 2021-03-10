@@ -10,6 +10,7 @@ import AdatvedelemTable1 from "../components/AdatvedelemTable1";
 import seoImage from "../pics/landing_img_small.jpg";
 import MetaTags from "../components/MetaTags";
 import "./adatvedelem.css";
+import Mainimage from "../components/Image";
 
 const Adatvedelem = () => {
   return (
@@ -19,6 +20,7 @@ const Adatvedelem = () => {
         img={seoImage}
         description="Adatvédelem - Nyolcág"
       />
+       <Mainimage />
       <Container className="maincontainer">
         <Row>
           <Col>
