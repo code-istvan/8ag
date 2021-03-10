@@ -4,7 +4,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { hydrate, render } from "react-dom";
+// import { hydrate, render } from "react-dom";
+import { render } from "react-snapshot";
 
 // class App extends React.Component {
 //   state = { checked: false }
@@ -16,16 +17,23 @@ import { hydrate, render } from "react-dom";
 //   document.getElementById("root")
 // );
 
-const rootElement = document.getElementById("root");
-if (rootElement.hasChildNodes()) {
-  hydrate(<BrowserRouter>
+// const rootElement = document.getElementById("root");
+// if (rootElement.hasChildNodes()) {
+//   hydrate(<BrowserRouter>
+//     <App />
+//   </BrowserRouter>, rootElement);
+// } else {
+//   render(<BrowserRouter>
+//     <App />
+//   </BrowserRouter>, rootElement);
+// }
+
+render(
+  <BrowserRouter>
     <App />
-  </BrowserRouter>, rootElement);
-} else {
-  render(<BrowserRouter>
-    <App />
-  </BrowserRouter>, rootElement);
-}
+  </BrowserRouter>,
+  document.getElementById("root")
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
