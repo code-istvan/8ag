@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 const MetaTags = (props) => {
   return (
     <Helmet>
+      <title>{props.title}</title>
       <meta property="og:title" content={props.title} />
       <meta
         property="og:description"
