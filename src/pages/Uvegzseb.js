@@ -15,7 +15,7 @@ const Uvegzseb = () => {
       <MetaTags
         title="Üvegzseb - Nyolcág"
         img={img}
-        description="Projektjeink, működésünk cashfloja itt tekinthető meg."
+        description="Projektjeink, működésünk cashfloja itt tekinthető meg"
       />
       <Mainimage />
       <Container fluid className="maincontainer">
