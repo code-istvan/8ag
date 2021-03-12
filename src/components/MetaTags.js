@@ -2,13 +2,13 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 const MetaTags = (props) => {
-  baseUrl = "https://nyolcag.hu";
+  const baseUrl = "https://nyolcag.hu";
   const structuredData = {
     "@context": "http://schema.org",
     "@type": "WebSite",
     name: props.title.toString(),
     url: window.location.origin.toString(),
-    description: props.description.body.toString(),
+    description: props.description.toString(),
     image: baseUrl + props.img,
   };
 
