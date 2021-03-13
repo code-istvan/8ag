@@ -9,7 +9,7 @@ const mainimage = () => {
     <Image
       id="imagecollapse"
       src={window.innerWidth > 768 ? pic : picSmall}
-      alt="Yoga in Mysore"
+      alt="Astanga jóga Mysore-ban"
       width="2000"
       fluid
     />

@@ -8,6 +8,7 @@ import { Switch, Route } from "react-router-dom";
 import Fooldal from "./pages/Fooldal";
 import EgySzazalek from "./pages/EgySzazalek";
 import Kapcsolat from "./pages/Kapcsolat";
+import Blog from "./pages/Blog";
 import Projekt from "./pages/Projekt";
 import Projektjeink from "./pages/Projektjeink";
 import Adatvedelem from "./pages/Adatvedelem";
@@ -45,6 +46,9 @@ const App = () => {
         </Route>
         <Route path="/kapcsolat">
           <Kapcsolat />
+        </Route>
+        <Route path="/blog">
+          <Blog />
         </Route>
         <Route path="/adatvedelem">
           <Adatvedelem />

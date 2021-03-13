@@ -7,7 +7,7 @@ const Navbar8 = () => {
   return (
     <Navbar
       collapseOnSelect
-      expand="lg"
+      expand="xl"
       className="color-nav"
       variant="light"
       sticky="top"
@@ -37,6 +37,9 @@ const Navbar8 = () => {
               ÜVEGZSEB
             </NavDropdown.Item>
           </NavDropdown>
+          <Nav.Link className="hoover" href="/blog">
+            BLOG
+          </Nav.Link>
           <Nav.Link className="hoover" href="/kapcsolat">
             KAPCSOLAT
           </Nav.Link>
