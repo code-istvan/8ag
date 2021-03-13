@@ -79,6 +79,7 @@ const Projectjeink = () => {
                 </Card.Body>
               </Card>
             </Accordion>
+            <br />
           </Col>
           <br />
           <Col md={4}>
@@ -114,6 +115,7 @@ const Projectjeink = () => {
                 </Card.Body>
               </Card>
             </Accordion>
+            <br />
           </Col>
           <br />
           <Col md={4}>
