@@ -18,7 +18,7 @@ const Fooldal = () => {
         title="Főoldal - Nyolcág"
         img={seoImage}
         description="Nyolcágú Jóga Alapítvány honlapja Az Alapítvány célja, hogy a jóga elméletét és gyakorlatát minél szélesebb körben és folyamatosan népszerűsítse Magyarországon. Az Indiából eredeztethető jóga már évezredek óta segíti az embereket a testi és lelki egészség elérésében és megőrzésében."
-      />      
+      />
       <Mainimage />
       <Container className="maincontainer">
         <h1>Nyolcágú jóga alapítvány</h1>
@@ -212,6 +212,27 @@ const Fooldal = () => {
                   Bimba András Imre
                   <br />
                   astanga jóga gyakorló/oktató
+                  <br />
+                  <Link href="https://bandhaworks.hu" target="_blank">
+                    bandhaworks.hu
+                  </Link>
+                </ListGroup.Item>
+              </ListGroup>
+            </Card>
+          </Col>
+        </Row>
+        <br />
+        <Row className="justify-content-md-center">
+          <Col md={4}>
+            <Card className="cardHover">
+              <Card.Header>
+                <b>Alapítványunk jogásza</b>
+              </Card.Header>
+              <ListGroup variant="flush">
+                <ListGroup.Item>
+                  Dr. Kővári Zsuzsa
+                  <br />
+                  astanga jóga gyakorló
                   <br />
                   <Link href="https://bandhaworks.hu" target="_blank">
                     bandhaworks.hu

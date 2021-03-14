@@ -31,9 +31,8 @@ const AdatvedelemTable1 = () => {
           <td>Név, bankszámlaszám</td>
           <td>
             A számviteli bizonylatok alátámasztásához szükséges adatokat a
-            számvitelről szóló 2000. évi C. törvény 169. § (2) bekezdése
-            alapjánPostai csekk kiküldése adomány juttatásának lehetővé tétele
-            céljából 8 évig meg kell őrizni
+            számvitelről szóló 2000. évi C. törvény 169. § (2) bekezdése alapján
+            8 évig meg kell őrizni
           </td>
         </tr>
 
