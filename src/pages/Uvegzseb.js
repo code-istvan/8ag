@@ -31,10 +31,10 @@ const Uvegzseb = () => {
               <h3>2021-ben beérkezett magán- és intézményi támogatások</h3>
               <UvegzsebTable />
               <br />
-              <p>
+              {/* <p>
                 *Az adományozó hozzájárulásának lekérdezése folyamatban van,
                 hogy hozzájárul-e a nevének megjelenéséhez.
-              </p>
+              </p> */}
               <h3>Kiadásaink 2021-ben</h3>
               <UvegzsebKiadas />
               <br />
