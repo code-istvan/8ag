@@ -1,0 +1,16 @@
+.content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  width: 90%;
+}
+
+.ql-picker-label svg{
+    height: auto;
+}
+
+.ql-formats button svg{
+    width: auto;
+}
