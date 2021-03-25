@@ -138,18 +138,13 @@ const Blog = () => {
         <Row>
           {loading ? (
             <div>
-              <h3>Loading...</h3>
+              <h3>Loading..</h3>
             </div>
-          ):
-          !allPosts.length ? (
-            <div>
-              <h3>There is nothing to see here!</h3>
-            </div>
-          ) : (
+          ) : allPosts.length ? (
             allPosts.map((eachPost) => {
               return (
-                <Col md={4}>
-                  <Card className="cardHover" key={eachPost.id}>
+                <Col md={4} key={eachPost.id}>
+                  <Card className="cardHover">
                     <Card.Img
                       variant="top"
                       src={eachPost.coverImage}
@@ -175,6 +170,10 @@ const Blog = () => {
                 </Col>
               );
             })
+          ) : (
+            <div>
+              <h3>There is nothing to see here!</h3>
+            </div>
           )}
         </Row>
       </Container>
