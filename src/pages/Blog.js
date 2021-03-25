@@ -116,7 +116,7 @@ const Blog = () => {
         </Row>
         <Row>
           <Col>
-            <h3>Hamarosan!</h3>
+            <h3>A BLOG jelenleg fejlesztés alatt áll</h3>
           </Col>
         </Row>
         <Row>
@@ -138,7 +138,7 @@ const Blog = () => {
         <Row>
           {loading ? (
             <div>
-              <h3>Loading..</h3>
+              <h3>Betöltés...</h3>
             </div>
           ) : allPosts.length ? (
             allPosts.map((eachPost) => {
