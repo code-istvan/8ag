@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -7,27 +7,99 @@ import MetaTags from "../components/MetaTags";
 import Mainimage from "../components/Image";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-// import styled from "styled-components";
+import getFirebase from "../firebase";
+import Parser from "html-react-parser";
+import "./blog.css";
+import CreateBlog from "../components/CreateBlog";
 
 const Blog = () => {
+  const [loading, setLoading] = useState(true);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [overview, setOverview] = useState("");
   const [allPosts, setAllPosts] = useState([]);
-  const savePostTitleToState = (event) => {
-    setTitle(event.target.value);
-    console.log(title);
-  };
-  const savePostContentToState = (event) => {
-    setContent(event.target.value);
-    console.log(content);
-  };
+  const [fileName, setFileName] = useState("");
+  const [url, setURL] = useState("");
+
+  if (loading && !allPosts.length) {
+    getFirebase()
+      .database()
+      .ref("/posts")
+      .orderByChild("time")
+      .once("value")
+      .then((snapshot) => {
+        let posts = [];
+        snapshot.forEach((snap) => {
+          posts.push(snap.val());
+        });
+        const newestFirst = posts.reverse();
+        setAllPosts(newestFirst);
+        setLoading(false);
+      });
+  }
+
+  useEffect(() => {
+    if (!loading) {
+      getFirebase().database().ref("/posts").set(allPosts);
+    }
+  }, [allPosts]);
+
   const savePost = () => {
     const id = Date.now();
-    setAllPosts([...allPosts, { title, content, id }]);
+    setAllPosts([
+      {
+        title,
+        content,
+        id,
+        coverImage: url
+          ? url
+          : "https://images.unsplash.com/uploads/141310026617203b5980d/c86b8baa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE1NzUwODQw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600",
+        dateFormatted: new Date().toLocaleString("en-US"),
+        datePretty: new Date().toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        }),
+        overview: overview,
+        time: getFirebase().database.ServerValue.TIMESTAMP,
+      },
+      ...allPosts,
+    ]);
     setTitle("");
     setContent("");
-    console.log(allPosts);
+    setFileName("");
+    setURL("");
   };
+
+  const editorChangeHandler = (content, delta, source, editor) => {
+    setContent(editor.getHTML());
+    setOverview(editor.getText());
+  };
+
+  const handleDrop = async (acceptedFiles) => {
+    setFileName(acceptedFiles[0].name);
+    const base64 = await convertBase64(acceptedFiles[0]);
+    setURL(base64);
+  };
+
+  const convertBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      };
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
+  };
+
+  const handleDeleteFile = () => {
+    setFileName("");
+    setURL("");
+  };
+
   return (
     <React.Fragment>
       <MetaTags
@@ -49,64 +121,59 @@ const Blog = () => {
         </Row>
         <Row>
           <Col>
-            <div>
-              <input
-                type="text"
-                name="title"
-                placeholder="Enter your blog post title"
-                className="InputMassage"
-                autoComplete="off"
-                onChange={savePostTitleToState}
-                value={title}
-                required
-              />
-              <textarea
-                rows={5}
-                name="description"
-                placeholder="Enter your blog post content"
-                className="TextAreaStyle"
-                autoComplete="off"
-                onChange={savePostContentToState}
-                value={content}
-                required
-              />
-              <Button variant="primary" type="submit" onClick={savePost}>
-                Submit
-              </Button>
-            </div>
+            <CreateBlog
+              editorChangeHandler={editorChangeHandler}
+              savePost={savePost}
+              title={title}
+              content={content}
+              setTitle={setTitle}
+              handleDrop={handleDrop}
+              fileName={fileName}
+              handleDeleteFile={handleDeleteFile}
+            />
           </Col>
         </Row>
+        <hr />
         <br />
         <Row>
-          {!allPosts.length ? (
+          {loading ? (
             <div>
-              <h3>There is nothing to see here!</h3>
+              <h3>Loading..</h3>
             </div>
-          ) : (
+          ) : allPosts.length ? (
             allPosts.map((eachPost) => {
               return (
-                <Col md={4}>
-                  <Card className="cardHover" key={eachPost.id}>
+                <Col md={4} key={eachPost.id}>
+                  <Card className="cardHover">
                     <Card.Img
                       variant="top"
-                      src={
-                        "https://images.unsplash.com/uploads/141310026617203b5980d/c86b8baa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE1NzUwODQw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600"
-                      }
+                      src={eachPost.coverImage}
+                      alt={eachPost.coverImageAlt}
                     />
                     <Card.Body className="bodyColor">
                       <Card.Title>
                         <h5>{eachPost.title}</h5>
                       </Card.Title>
                       <Card.Text>
-                        <span>{eachPost.content}</span>
-                        <br />
-                        <Button variant="primary">Read More</Button>
+                        <span className="content">
+                          {Parser(eachPost.overview)}
+                        </span>
                       </Card.Text>
+                      <Card.Text>
+                        <h6>{eachPost.datePretty}</h6>
+                      </Card.Text>
+                      <Card.Subtitle>
+                        <Button variant="primary">Read More</Button>
+                      </Card.Subtitle>
                     </Card.Body>
                   </Card>
                 </Col>
               );
             })
+          ) : (
+            <div>
+              <h3>There is nothing to see here!</h3>
+            </div>
           )}
         </Row>
       </Container>
@@ -115,110 +182,3 @@ const Blog = () => {
 };
 
 export default Blog;
-
-// Step One
-
-// const Blog = () => {
-//   const [title, setTitle] = useState("");
-//   const [content, setContent] = useState("");
-//   const [allPosts, setAllPosts] = useState([]);
-//   const savePostTitleToState = (event) => {
-//     setTitle(event.target.value);
-//     console.log(title);
-//   };
-//   const savePostContentToState = (event) => {
-//     setContent(event.target.value);
-//     console.log(content);
-//   };
-//   const savePost = () => {
-//     const id = Date.now();
-//     setAllPosts([...allPosts, { title, content, id }]);
-//     setTitle("");
-//     setContent("");
-//     console.log(allPosts);
-//   };
-//   return (
-//     <React.Fragment>
-//       <MetaTags
-//         title="BLOG - Nyolcág"
-//         img={seoImage}
-//         description="A Nyolcágú Jóga Alapítvány Blogja"
-//       />
-//       <Mainimage />
-//       <Container className="maincontainer">
-//         <Row>
-//           <Col>
-//             <h1>BLOG</h1>
-//           </Col>
-//         </Row>
-//         <Row>
-//           <Col>
-//             <h3>Hamarosan!</h3>
-//           </Col>
-//         </Row>
-//         <Row>
-//           <Col>
-//             <div>
-//               <input
-//                 type="text"
-//                 name="title"
-//                 placeholder="Enter your blog post title"
-//                 className="InputMassage"
-//                 autoComplete="off"
-//                 onChange={savePostTitleToState}
-//                 value={title}
-//                 required
-//               />
-//               <textarea
-//                 rows={5}
-//                 name="description"
-//                 placeholder="Enter your blog post content"
-//                 className="TextAreaStyle"
-//                 autoComplete="off"
-//                 onChange={savePostContentToState}
-//                 value={content}
-//                 required
-//               />
-//               <Button variant="primary" type="submit" onClick={savePost}>
-//                 Submit
-//               </Button>
-//             </div>
-//           </Col>
-//         </Row>
-//         <br />
-//         <Row>
-//             {!allPosts.length ? (
-//               <div>
-//                 <h3>There is nothing to see here!</h3>
-//               </div>
-//             ) : (
-//               allPosts.map((eachPost) => {
-//                 return (
-//                   <Col md={4}>
-//                   <Card className="cardHover" key={eachPost.id}>
-//                     <Card.Img
-//                       variant="top"
-//                       src={
-//                         "https://images.unsplash.com/uploads/141310026617203b5980d/c86b8baa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE1NzUwODQw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600"
-//                       }
-//                     />
-//                     <Card.Body className="bodyColor">
-//                       <Card.Title>
-//                         <h5>{eachPost.title}</h5>
-//                       </Card.Title>
-//                       <Card.Text>
-//                         <span>{eachPost.content}</span>
-//                         <br />
-//                         <Button variant="primary">Read More</Button>
-//                       </Card.Text>
-//                     </Card.Body>
-//                   </Card>
-//                   </Col>
-//                 );
-//               })
-//             )}
-//         </Row>
-//       </Container>
-//     </React.Fragment>
-//   );
-// };
