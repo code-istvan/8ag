@@ -37,9 +37,10 @@ const Projekt = () => {
         <Row className="justify-content-md-center">
           <Col className="justify">
             <Alert variant="primary">
-              Amennyiben szeretnéd, hogy az adomány beérkezését követően a
-              nevedet és az adomány összegét, vagy csak a nevedet az Alapítvány
-              honlapján nyilvánosságra hozzuk, ehhez hozzájárulásod az
+              Amennyiben szeretnéd, hogy az támogatás (adomány) beérkezését
+              követően a nevedet és az támogatás összegét, vagy csak a nevedet
+              az Alapítvány honlapján nyilvánosságra hozzuk, ehhez
+              hozzájárulásod az
               <Link href="/adatvedelem"> Adatvédelmi Tájékoztató </Link>II.
               pontjában foglaltak szerint adhatod meg.
             </Alert>
