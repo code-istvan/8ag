@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -20,6 +21,9 @@ const Blog = () => {
   const [allPosts, setAllPosts] = useState([]);
   const [fileName, setFileName] = useState("");
   const [url, setURL] = useState("");
+  const [validate, setValidate] = useState(true);
+
+  let history = useHistory();
 
   if (loading && !allPosts.length) {
     getFirebase()
@@ -45,30 +49,35 @@ const Blog = () => {
   }, [allPosts]);
 
   const savePost = () => {
-    const id = Date.now();
-    setAllPosts([
-      {
-        title,
-        content,
-        id,
-        coverImage: url
-          ? url
-          : "https://images.unsplash.com/uploads/141310026617203b5980d/c86b8baa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE1NzUwODQw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600",
-        dateFormatted: new Date().toLocaleString("en-US"),
-        datePretty: new Date().toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "short",
-          day: "numeric",
-        }),
-        overview: overview,
-        time: getFirebase().database.ServerValue.TIMESTAMP,
-      },
-      ...allPosts,
-    ]);
-    setTitle("");
-    setContent("");
-    setFileName("");
-    setURL("");
+    if (title && content) {
+      const id = Date.now();
+      setAllPosts([
+        {
+          title,
+          content,
+          id,
+          coverImage: url
+            ? url
+            : "https://images.unsplash.com/uploads/141310026617203b5980d/c86b8baa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE1NzUwODQw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600",
+          dateFormatted: new Date().toLocaleString("en-US"),
+          datePretty: new Date().toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          }),
+          overview: overview,
+          time: getFirebase().database.ServerValue.TIMESTAMP,
+        },
+        ...allPosts,
+      ]);
+      setValidate(true);
+      setTitle("");
+      setContent("");
+      setFileName("");
+      setURL("");
+    } else {
+      setValidate(false);
+    }
   };
 
   const editorChangeHandler = (content, delta, source, editor) => {
@@ -130,6 +139,7 @@ const Blog = () => {
               handleDrop={handleDrop}
               fileName={fileName}
               handleDeleteFile={handleDeleteFile}
+              validate={validate}
             />
           </Col>
         </Row>
@@ -160,10 +170,15 @@ const Blog = () => {
                         </span>
                       </Card.Text>
                       <Card.Text>
-                        <h6>{eachPost.datePretty}</h6>
+                      {eachPost.datePretty}
                       </Card.Text>
                       <Card.Subtitle>
-                        <Button variant="primary">Read More</Button>
+                        <Button
+                          variant="primary"
+                          onClick={() => history.push("/post/" + eachPost.id)}
+                        >
+                          Read More
+                        </Button>
                       </Card.Subtitle>
                     </Card.Body>
                   </Card>
