@@ -15,6 +15,7 @@ import Adatvedelem from "./pages/Adatvedelem";
 import Uvegzseb from "./pages/Uvegzseb";
 import ReactGA from "react-ga";
 import NotFound from "./components/NotFound";
+import ViewBlog from "./pages/ViewBlog";
 // import RouteChangeTracker from './components/RouteChangeTracker';
 
 const App = () => {
@@ -29,33 +30,16 @@ const App = () => {
     <div className="App">
       <Navbar8 />
       <Switch>
-        <Route path="/" exact>
-          <Fooldal />
-        </Route>
-        <Route path="/projektjeink">
-          <Projektjeink />
-        </Route>
-        <Route path="/egyszazalek">
-          <EgySzazalek />
-        </Route>
-        <Route path="/projekt">
-          <Projekt />
-        </Route>
-        <Route path="/uvegzseb">
-          <Uvegzseb />
-        </Route>
-        <Route path="/kapcsolat">
-          <Kapcsolat />
-        </Route>
-        <Route path="/blog">
-          <Blog />
-        </Route>
-        <Route path="/adatvedelem">
-          <Adatvedelem />
-        </Route>
-        <Route path="*">
-          <NotFound />
-        </Route>
+        <Route path="/" exact component={Fooldal}></Route>
+        <Route path="/projektjeink" component={Projektjeink}></Route>
+        <Route path="/egyszazalek" component={EgySzazalek}></Route>
+        <Route path="/projekt" component={Projekt}></Route>
+        <Route path="/uvegzseb" component={Uvegzseb}></Route>
+        <Route path="/kapcsolat" component={Kapcsolat}></Route>
+        <Route path="/blog" component={Blog}></Route>
+        <Route path="/post/:id" component={ViewBlog}></Route>
+        <Route path="/adatvedelem" component={Adatvedelem}></Route>
+        <Route component={NotFound}></Route>
       </Switch>
       <Footer />
     </div>
