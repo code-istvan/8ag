@@ -21,8 +21,8 @@ const AdatvedelemTable1 = () => {
 
         <tr>
           <td>
-            Magánszemélytől banki átutalással érkező adomány könyvviteli
-            elszámolása
+            Magánszemélytől banki átutalással érkező támogatás (adomány)
+            könyvviteli elszámolása
           </td>
           <td>
             GDPR 6. Cikk (1) bekezdés c) pontja – az adatkezelőre vonatkozó jogi
@@ -38,7 +38,8 @@ const AdatvedelemTable1 = () => {
 
         <tr>
           <td>
-            Postai csekk kiküldése adomány juttatásának lehetővé tétele céljából
+            Postai csekk kiküldése támogatás (adomány) juttatásának lehetővé
+            tétele céljából
           </td>
           <td>
             GDPR 6. Cikk (1) bekezdés a) pontja – az érintett önkéntes, konkrét,
@@ -51,7 +52,10 @@ const AdatvedelemTable1 = () => {
           </td>
         </tr>
         <tr>
-          <td>Postai csekk útján érkező adomány könyvviteli elszámolása</td>
+          <td>
+            Postai csekk útján érkező támogatás (adomány) könyvviteli
+            elszámolása
+          </td>
           <td>
             GDPR 6. Cikk (1) bekezdés c) pontja - az adatkezelőre vonatkozó jogi
             kötelezettség teljesítése
@@ -65,8 +69,7 @@ const AdatvedelemTable1 = () => {
         </tr>
         <tr>
           <td>
-            Adományozó nevének és az adományozott összegnek a nyilvánosságra
-            hozatala
+            Támogató nevének és a támogatás összegének a nyilvánosságra hozatala
           </td>
           <td>
             GDPR 6. Cikk (1) bekezdés a) pontja - az érintett önkéntes, konkrét,

@@ -20,7 +20,7 @@ const Adatvedelem = () => {
         img={seoImage}
         description="Adatvédelem - Nyolcág"
       />
-       <Mainimage />
+      <Mainimage />
       <Container className="maincontainer">
         <Row>
           <Col>
@@ -157,10 +157,13 @@ const Adatvedelem = () => {
               <AdatvedelemTable />
               <br />
               <h4 className="underline">
-                II. Adományozásra vonatkozó adatkezelés
+                II. Támogatásra, adományozásra vonatkozó adatkezelés
               </h4>
               <br />
-              <h4>1. Az adományozásra vonatkozó egyes adatkezelési esetek</h4>
+              <h4>
+                1. A támogatásra (adományozásra) vonatkozó egyes adatkezelési
+                esetek
+              </h4>
               <br />
               <ul>
                 <li>
@@ -185,21 +188,23 @@ const Adatvedelem = () => {
               </p>
               <ul>
                 <li>
-                  <h5>Adományozók nevének nyilvánosságra hozatala</h5>
+                  <h5>
+                    Támogatók (adományozók) nevének nyilvánosságra hozatala
+                  </h5>
                 </li>
               </ul>
               <p>
                 Amennyiben Ön a namaste (kukac) nyolcag (pont) hu e-mail címre
-                küldött levelében egy nyilatkozattalhozzájárul, nevét és az
-                adományozott összeget vagy csak nevét feltüntetjük honlapunkon
-                az adományozók között. Ön a hozzájárulását bármikor
-                visszavonhatja az namaste (kukac) nyolcag (pont) hu e-mail címre
-                küldött, ez irányú kérésével.
+                küldött levelében egy nyilatkozattalhozzájárul, nevét és a
+                támogatás összegét vagy csak nevét feltüntetjük honlapunkon a
+                támogatók között. Ön a hozzájárulását bármikor visszavonhatja az
+                namaste (kukac) nyolcag (pont) hu e-mail címre küldött, ez
+                irányú kérésével.
               </p>
               <br />
               <h4>
-                2. Az általunk gyűjtött személyes adatok, a jogalap és a cél és
-                az adatmegőrzési idő megjelölésével
+                2. Az általunk gyűjtött személyes adatok, és a jogalap és a cél
+                és az adatmegőrzési idő megjelölésével
               </h4>
               <br />
               <AdatvedelemTable1 />
