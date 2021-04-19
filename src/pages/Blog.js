@@ -123,11 +123,11 @@ const Blog = () => {
             <h1>BLOG</h1>
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           <Col>
             <h3>A BLOG jelenleg fejlesztés alatt áll</h3>
           </Col>
-        </Row>
+        </Row> */}
         <Row>
           <Col>
             <CreateBlog
@@ -169,9 +169,7 @@ const Blog = () => {
                           {Parser(eachPost.overview)}
                         </span>
                       </Card.Text>
-                      <Card.Text>
-                      {eachPost.datePretty}
-                      </Card.Text>
+                      <Card.Text>{eachPost.datePretty}</Card.Text>
                       <Card.Subtitle>
                         <Button
                           variant="primary"
