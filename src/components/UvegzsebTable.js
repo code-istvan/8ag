@@ -40,15 +40,15 @@ const UvegzsebTable = () => {
         </tr>
         <tr className="secondLineColor">
           <td>5</td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>2021.04.15</td>
+          <td>N. György</td>
+          <td>20.000.-</td>
         </tr>
         <tr className="firstLineColor">
           <td>6</td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>2021.04.19</td>
+          <td>Sz. I.</td>
+          <td>10.000.-</td>
         </tr>
         <tr className="secondLineColor">
           <td>7</td>
