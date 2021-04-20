@@ -140,11 +140,11 @@ const Blog = (props) => {
           <React.Fragment>
             <Row>
               <Col xs="4">
-                <h6>Welcome {user && user.email}!</h6>
+                <h6>Namasté {user && user.email}!</h6>
               </Col>
               <Col>
                 <Button variant="primary" type="submit" onClick={logout}>
-                  Logout
+                  Kijelentkezés
                 </Button>
               </Col>
             </Row>
@@ -197,7 +197,7 @@ const Blog = (props) => {
                           variant="primary"
                           onClick={() => history.push("/post/" + eachPost.id)}
                         >
-                          Read More
+                          Olvass tovább
                         </Button>
                       </Card.Subtitle>
                     </Card.Body>
