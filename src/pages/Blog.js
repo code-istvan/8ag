@@ -13,7 +13,7 @@ import Parser from "html-react-parser";
 import "./blog.css";
 import CreateBlog from "../components/CreateBlog";
 
-const Blog = () => {
+const Blog = (props) => {
   const [loading, setLoading] = useState(true);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -24,6 +24,8 @@ const Blog = () => {
   const [validate, setValidate] = useState(true);
 
   let history = useHistory();
+
+  let { user, setUser, onAuthStateChange } = props;
 
   if (loading && !allPosts.length) {
     getFirebase()
@@ -109,6 +111,12 @@ const Blog = () => {
     setURL("");
   };
 
+  const logout = () => {
+    getFirebase().auth().signOut();
+    onAuthStateChange(setUser);
+    window.location.reload();
+  };
+
   return (
     <React.Fragment>
       <MetaTags
@@ -123,27 +131,41 @@ const Blog = () => {
             <h1>BLOG</h1>
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           <Col>
             <h3>A BLOG jelenleg fejlesztés alatt áll</h3>
           </Col>
-        </Row>
-        <Row>
-          <Col>
-            <CreateBlog
-              editorChangeHandler={editorChangeHandler}
-              savePost={savePost}
-              title={title}
-              content={content}
-              setTitle={setTitle}
-              handleDrop={handleDrop}
-              fileName={fileName}
-              handleDeleteFile={handleDeleteFile}
-              validate={validate}
-            />
-          </Col>
-        </Row>
-        <hr />
+        </Row> */}
+        {user && (
+          <React.Fragment>
+            <Row>
+              <Col xs="4">
+                <h6>Welcome {user && user.email}!</h6>
+              </Col>
+              <Col>
+                <Button variant="primary" type="submit" onClick={logout}>
+                  Logout
+                </Button>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <CreateBlog
+                  editorChangeHandler={editorChangeHandler}
+                  savePost={savePost}
+                  title={title}
+                  content={content}
+                  setTitle={setTitle}
+                  handleDrop={handleDrop}
+                  fileName={fileName}
+                  handleDeleteFile={handleDeleteFile}
+                  validate={validate}
+                />
+              </Col>
+            </Row>
+            <hr />
+          </React.Fragment>
+        )}
         <br />
         <Row>
           {loading ? (
