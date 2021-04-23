@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -7,12 +7,13 @@ import GoogleMap from "../components/GoogleMap";
 import ButtonInputStyle from "../components/StyledComponents/ButtonInputStyle";
 import ReactDOM from "react-dom";
 import "./Kapcsolat.css";
-// import Checkbox from "../components/Checkbox";
+import Checkbox from "../components/Checkbox";
 import Link from "../components/StyledComponents/Link";
 import seoImage from "../pics/landing_img_small.jpg";
 import MetaTags from "../components/MetaTags";
 
 const Kapcsolat = () => {
+  const [checked, setChecked] = useState(false);
   function sendEmail(e) {
     e.preventDefault();
 
@@ -35,6 +36,10 @@ const Kapcsolat = () => {
       );
     e.target.reset();
   }
+
+  const handleCheckboxChange = (event) => {
+    setChecked(event.target.checked);
+  };
 
   const inputClick2 = (e) => {
     e.target.value
@@ -109,6 +114,7 @@ const Kapcsolat = () => {
               onChange={inputClick2}
               required
             />
+            <Checkbox checked={checked} onChange={handleCheckboxChange} />
           </Col>
         </Row>
         <Row>

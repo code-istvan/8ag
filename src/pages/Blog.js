@@ -197,7 +197,7 @@ const Blog = (props) => {
                           variant="primary"
                           onClick={() => history.push("/post/" + eachPost.id)}
                         >
-                          Olvass tovább
+                          Tovább a bejegyzésre
                         </Button>
                       </Card.Subtitle>
                     </Card.Body>
