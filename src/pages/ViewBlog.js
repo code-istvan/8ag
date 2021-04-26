@@ -5,14 +5,14 @@ import { useHistory } from "react-router-dom";
 import Mainimage from "../components/Image";
 import MetaTags from "../components/MetaTags";
 import getFirebase from "../firebase";
-import seoImage from "../pics/landing_img_small.jpg";
+// import seoImage from "../pics/landing_img_small.jpg";
 import "./blog.css";
 
 const ViewBlog = (props) => {
   const [loading, setLoading] = useState(true);
   const [post, setPost] = useState(null);
 
-  const ID = props.match.params.id;
+  const ID = props.location.state;
   let history = useHistory();
 
   if (loading) {
@@ -25,16 +25,21 @@ const ViewBlog = (props) => {
         var result = Object.values(snapshot.val());
         setPost(result[0]);
         setLoading(false);
+        <MetaTags
+          title={result[0].title}
+          img={result[0].coverImage}
+          description={result[0].overview}
+        />;
       });
   }
 
   return (
     <React.Fragment>
-      <MetaTags
+      {/* <MetaTags
         title="BLOG - Nyolcág"
         img={seoImage}
         description="A Nyolcágú Jóga Alapítvány Blogja"
-      />
+      /> */}
       <Mainimage />
       <Container className="maincontainer">
         {loading ? (

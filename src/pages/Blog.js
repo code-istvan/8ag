@@ -20,7 +20,7 @@ const Blog = (props) => {
   const [overview, setOverview] = useState("");
   const [allPosts, setAllPosts] = useState([]);
   const [fileName, setFileName] = useState("");
-  const [url, setURL] = useState("");
+  const [imgBaseUrl, setImgBaseUrl] = useState("");
   const [validate, setValidate] = useState(true);
 
   let history = useHistory();
@@ -53,13 +53,14 @@ const Blog = (props) => {
   const savePost = () => {
     if (title && content) {
       const id = Date.now();
+      const url = title.toLowerCase().trim().replace(" ","-");
       setAllPosts([
         {
           title,
           content,
           id,
-          coverImage: url
-            ? url
+          coverImage: imgBaseUrl
+            ? imgBaseUrl
             : "https://images.unsplash.com/uploads/141310026617203b5980d/c86b8baa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjE1NzUwODQw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600",
           dateFormatted: new Date().toLocaleString("en-US"),
           datePretty: new Date().toLocaleDateString("en-US", {
@@ -67,6 +68,7 @@ const Blog = (props) => {
             month: "short",
             day: "numeric",
           }),
+          url:url,
           overview: overview,
           time: getFirebase().database.ServerValue.TIMESTAMP,
         },
@@ -76,7 +78,7 @@ const Blog = (props) => {
       setTitle("");
       setContent("");
       setFileName("");
-      setURL("");
+      setImgBaseUrl("");
     } else {
       setValidate(false);
     }
@@ -90,7 +92,7 @@ const Blog = (props) => {
   const handleDrop = async (acceptedFiles) => {
     setFileName(acceptedFiles[0].name);
     const base64 = await convertBase64(acceptedFiles[0]);
-    setURL(base64);
+    setImgBaseUrl(base64);
   };
 
   const convertBase64 = (file) => {
@@ -108,7 +110,7 @@ const Blog = (props) => {
 
   const handleDeleteFile = () => {
     setFileName("");
-    setURL("");
+    setImgBaseUrl("");
   };
 
   const logout = () => {
@@ -195,7 +197,7 @@ const Blog = (props) => {
                       <Card.Subtitle>
                         <Button
                           variant="primary"
-                          onClick={() => history.push("/post/" + eachPost.id)}
+                          onClick={() => history.push("/post/" + eachPost.url, eachPost.id)}
                         >
                           Tovább a bejegyzésre
                         </Button>
