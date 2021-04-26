@@ -53,7 +53,7 @@ const Blog = (props) => {
   const savePost = () => {
     if (title && content) {
       const id = Date.now();
-      const url = title.toLowerCase().trim().replace(" ","-");
+      const url = title.toLowerCase().trim().replace(/ /g,"-");
       setAllPosts([
         {
           title,
