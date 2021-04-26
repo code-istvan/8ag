@@ -7,10 +7,15 @@
   width: 90%;
 }
 
-.ql-picker-label svg{
-    height: auto;
+.ql-picker-label svg {
+  height: auto;
 }
 
-.ql-formats button svg{
-    width: auto;
+.ql-formats button svg {
+  width: auto;
+}
+
+.blogwidth {
+  width: 50%;
+  margin-bottom: 20px;
 }

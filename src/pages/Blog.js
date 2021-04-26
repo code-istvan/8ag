@@ -53,7 +53,7 @@ const Blog = (props) => {
   const savePost = () => {
     if (title && content) {
       const id = Date.now();
-      const url = title.toLowerCase().trim().replace(/ /g,"-");
+      const url = title.toLowerCase().trim().replace(/ /g, "-");
       setAllPosts([
         {
           title,
@@ -68,7 +68,7 @@ const Blog = (props) => {
             month: "short",
             day: "numeric",
           }),
-          url:url,
+          url: url,
           overview: overview,
           time: getFirebase().database.ServerValue.TIMESTAMP,
         },
@@ -197,7 +197,9 @@ const Blog = (props) => {
                       <Card.Subtitle>
                         <Button
                           variant="primary"
-                          onClick={() => history.push("/post/" + eachPost.url, eachPost.id)}
+                          onClick={() =>
+                            history.push("/post/" + eachPost.url, eachPost.id)
+                          }
                         >
                           Tovább a bejegyzésre
                         </Button>

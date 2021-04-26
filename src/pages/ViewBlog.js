@@ -41,7 +41,7 @@ const ViewBlog = (props) => {
         description="A Nyolcágú Jóga Alapítvány Blogja"
       /> */}
       <Mainimage />
-      <Container className="maincontainer">
+      <Container className="blogwidth">
         {loading ? (
           <div>
             <h3>Betöltés...</h3>
@@ -56,7 +56,7 @@ const ViewBlog = (props) => {
             <Row>
               <Col>
                 <h6>
-                  Published on <strong>{post.datePretty}</strong>
+                  Közzétéve: <strong>{post.datePretty}</strong>
                 </h6>
               </Col>
             </Row>
@@ -76,7 +76,7 @@ const ViewBlog = (props) => {
             <Row>
               <Col>
                 <Button variant="primary" onClick={() => history.push("/blog")}>
-                  Back to blogs
+                  Vissza a BLOG menübe
                 </Button>
               </Col>
             </Row>
