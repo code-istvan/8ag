@@ -19,3 +19,17 @@
   width: 50%;
   margin-bottom: 20px;
 }
+
+@media screen and (max-width: 992px) {
+  .blogwidth {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .blogwidth {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
