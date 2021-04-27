@@ -41,7 +41,7 @@ const ViewBlog = (props) => {
         description="A Nyolcágú Jóga Alapítvány Blogja"
       /> */}
       <Mainimage />
-      <Container className="blogwidth">
+      <Container className="blogwidth" id="mobil">
         {loading ? (
           <div>
             <h3>Betöltés...</h3>
