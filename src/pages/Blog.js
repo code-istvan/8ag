@@ -44,17 +44,11 @@ const Blog = (props) => {
       });
   }
 
-  useEffect(() => {
-    if (!loading) {
-      getFirebase().database().ref("/posts").set(allPosts);
-    }
-  }, [allPosts]);
-
   const savePost = () => {
     if (title && content) {
       const id = Date.now();
       const url = title.toLowerCase().trim().replace(/ /g, "-");
-      setAllPosts([
+      let updatedPosts = [
         {
           title,
           content,
@@ -73,12 +67,23 @@ const Blog = (props) => {
           time: getFirebase().database.ServerValue.TIMESTAMP,
         },
         ...allPosts,
-      ]);
-      setValidate(true);
-      setTitle("");
-      setContent("");
-      setFileName("");
-      setImgBaseUrl("");
+      ];
+
+      getFirebase()
+        .database()
+        .ref("/posts")
+        .set(allPosts)
+        .then(() => {
+          setAllPosts(updatedPosts);
+          setValidate(true);
+          setTitle("");
+          setContent("");
+          setFileName("");
+          setImgBaseUrl("");
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
     } else {
       setValidate(false);
     }
