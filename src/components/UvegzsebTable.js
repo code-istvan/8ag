@@ -52,9 +52,9 @@ const UvegzsebTable = () => {
         </tr>
         <tr className="secondLineColor">
           <td>7</td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>2021.05.25</td>
+          <td>Tuka Anita</td>
+          <td>4.000.-</td>
         </tr>
         <tr className="firstLineColor">
           <td>8</td>
