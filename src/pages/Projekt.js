@@ -13,6 +13,8 @@ import Alert from "react-bootstrap/Alert";
 import img from "../pics/landing_img_small.jpg";
 import MetaTags from "../components/MetaTags";
 import Mainimage from "../components/Image";
+import Accordion from "react-bootstrap/Accordion";
+import styled from "styled-components";
 
 const Projekt = () => {
   return (
@@ -83,32 +85,71 @@ const Projekt = () => {
         <br />
         <Row>
           <Col>
-            <Card className="taxnumber">
-              <Card.Header as="h3">Postai befizetés</Card.Header>
-              <Card.Body>
-                <Card.Text>
-                  Szeretsz postára járni? Postai befizetéssel is tudsz minket
-                  támogatni, amihez “sárga csekket” küldünk. Add meg a
-                  postacímedet, és már megy is a csekk. Az adományozásra
-                  vonatkozóan érdemes tudni, hogy készpénzzel történő
-                  csekkbefizetés kapcsán 2018. január 1-től változtak a
-                  szabályok. Az esetlegesen elkért személyes adatokat kizárólag
-                  a posta kezeli! Ezen a{" "}
-                  <Link
-                    href="https://www.posta.hu/csekkbefizetes_keszpenzzel_valtozo_szabalyok_2018"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    linken
-                  </Link>{" "}
-                  tájékozódhatsz erről.
-                </Card.Text>
-                <DevTooltipPosta />
-              </Card.Body>
-              <Card.Footer className="text-muted">
-                <b>Köszönjük :-)</b>
-              </Card.Footer>
-            </Card>
+            <Accordion>
+              <Card className="taxnumber">
+                <Card.Header as="h3">Postai befizetés</Card.Header>
+                <Card.Body>
+                  <Card.Text>
+                    Szeretsz postára járni? Postai befizetéssel is tudsz minket
+                    támogatni, amihez “sárga csekket” küldünk. Add meg a
+                    postacímedet, és már megy is a csekk. Az adományozásra
+                    vonatkozóan érdemes tudni, hogy készpénzzel történő
+                    csekkbefizetés kapcsán 2018. január 1-től változtak a
+                    szabályok. Az esetlegesen elkért személyes adatokat
+                    kizárólag a posta kezeli! Ezen a{" "}
+                    <Link
+                      href="https://www.posta.hu/csekkbefizetes_keszpenzzel_valtozo_szabalyok_2018"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      linken
+                    </Link>{" "}
+                    tájékozódhatsz erről. <br />
+                    <br />
+                    <Accordion.Toggle
+                      as={Button}
+                      variant="primary"
+                      eventKey="0"
+                    >
+                      Csekk igénylés
+                    </Accordion.Toggle>
+                    <Accordion.Collapse eventKey="0">
+                      <PaddingP>
+                        <fotm
+                          name="post-form"
+                          method="POST"
+                          data-netlify="true"
+                        >
+                          <input
+                            type="hidden"
+                            name="form-name"
+                            value="contact-form"
+                          />
+                          <input
+                            type="text"
+                            placeholder="Enter your name"
+                            name="name"
+                          />
+                          <br />
+                          <input
+                            type="email"
+                            placeholder="Enter your email"
+                            name="email"
+                          />
+                          <br />
+                          <button type="submit">Küldés</button>
+                        </fotm>
+                      </PaddingP>
+                    </Accordion.Collapse>
+                  </Card.Text>
+
+                  {/* <DevTooltipPosta /> */}
+                </Card.Body>
+                <Card.Footer className="text-muted">
+                  <b>Köszönjük :-)</b>
+                </Card.Footer>
+              </Card>
+            </Accordion>
           </Col>
         </Row>
         <br />
@@ -144,6 +185,11 @@ const Projekt = () => {
 };
 
 // Styled components
+
+const PaddingP = styled.p`
+  text-align: justify;
+  margin-top: 30px;
+`;
 
 // const A = styled.a`
 //   padding-bottom: 5px;
