@@ -127,16 +127,35 @@ const Projekt = () => {
                           />
                           <input
                             type="text"
-                            placeholder="Enter your name"
+                            placeholder="Ide írd a neved"
                             name="name"
                           />
-                          <br />
-                          <input
-                            type="email"
-                            placeholder="Enter your email"
-                            name="email"
-                          />
-                          <br />
+                          <p>
+                            <input
+                              type="text"
+                              placeholder="Pontos cím, emelet ajtó ha van"
+                              name="utca"
+                            />
+                          </p>
+                          <p>
+                            <input
+                              type="text"
+                              placeholder="Város"
+                              name="varos"
+                            />
+                          </p>
+                          <p>
+                            <input
+                              type="text"
+                              placeholder="Irányítószám"
+                              name="iranyito"
+                            />
+                          </p>
+                          <p>
+                            <label>
+                              Message: <textarea name="message"></textarea>
+                            </label>
+                          </p>
                           <button type="submit">Küldés</button>
                         </form>
                       </PaddingP>
