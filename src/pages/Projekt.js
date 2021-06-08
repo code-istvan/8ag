@@ -229,10 +229,10 @@ const Projekt = () => {
                             placeholder="Kézbesítési információ. Kitöltése nem kötelező!"
                             onChange={inputClick3}
                           ></textarea>
+                          <Row>
+                            <Col id="lol3"></Col>
+                          </Row>
                         </form>
-                        <Row>
-                          <Col id="lol3"></Col>
-                        </Row>
                       </PaddingP>
                     </Accordion.Collapse>
                   </Card.Text>
