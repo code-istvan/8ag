@@ -123,7 +123,7 @@ const Projekt = () => {
                           <input
                             type="hidden"
                             name="form-name"
-                            value="contact-form"
+                            value="post-form"
                           />
                           <input
                             type="text"
