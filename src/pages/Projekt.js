@@ -201,10 +201,11 @@ const Projekt = () => {
                             <Col>
                               {" "}
                               <input
-                                type="text"
+                                type="number"
                                 placeholder="Irányítószám*"
                                 name="iranyito"
                                 pattern="[0-9]{4}"
+                                maxLength="4"
                                 className="InputMassage"
                                 onChange={inputClick3}
                                 required
