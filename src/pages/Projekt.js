@@ -129,13 +129,15 @@ const Projekt = () => {
                             type="text"
                             placeholder="Ide írd a neved"
                             name="name"
-                            pattern="[A-Za-z]"
+                            pattern="[A-Za-z]{4,}"
+                            required
                           />
                           <p>
                             <input
                               type="text"
                               placeholder="Pontos cím, emelet ajtó ha van"
                               name="utca"
+                              required
                             />
                           </p>
                           <p>
@@ -143,7 +145,8 @@ const Projekt = () => {
                               type="text"
                               placeholder="Város"
                               name="varos"
-                              pattern="[A-Za-z]"
+                              pattern="[A-Za-z]{2,}"
+                              required
                             />
                           </p>
                           <p>
@@ -151,7 +154,8 @@ const Projekt = () => {
                               type="text"
                               placeholder="Irányítószám"
                               name="iranyito"
-                              maxlength="4"
+                              pattern="[0-9]{4}"
+                              required
                             />
                           </p>
                           <p>
