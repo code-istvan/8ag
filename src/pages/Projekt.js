@@ -127,8 +127,14 @@ const Projekt = () => {
                           />
                           <input
                             type="text"
-                            placeholder="Ide írd a neved"
-                            name="name"
+                            placeholder="Ide írd a család/vezeték neved"
+                            name="csaladnev"
+                            required
+                          />
+                          <input
+                            type="text"
+                            placeholder="Ide írd a keresztneved"
+                            name="keresztnév"
                             required
                           />
                           <p>
