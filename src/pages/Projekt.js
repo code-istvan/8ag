@@ -165,8 +165,8 @@ const Projekt = () => {
                               {" "}
                               <input
                                 type="text"
-                                placeholder="Ide írd a család neved*"
-                                name="csaladnev"
+                                placeholder="Ide írd a családneved*"
+                                name="csaladnév"
                                 className="InputMassage"
                                 onChange={inputClick3}
                                 required
