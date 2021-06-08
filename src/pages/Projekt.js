@@ -115,7 +115,7 @@ const Projekt = () => {
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="0">
                       <PaddingP>
-                        <fotm
+                        <form
                           name="post-form"
                           method="POST"
                           data-netlify="true"
@@ -138,7 +138,7 @@ const Projekt = () => {
                           />
                           <br />
                           <button type="submit">Küldés</button>
-                        </fotm>
+                        </form>
                       </PaddingP>
                     </Accordion.Collapse>
                   </Card.Text>
