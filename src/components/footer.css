@@ -1,10 +1,9 @@
-
 .backgroundColorTop {
-  background-color:  #bdbdbd;
+  background-color: #bdbdbd;
   border-top: 2px solid rgba(16, 15, 15, 0.4);
 }
 .backgroundColor {
-  background-color:  #bdbdbd;
+  background-color: #bdbdbd;
 }
 .backgroundColor2 {
   background-color: rgba(16, 15, 15, 0.81);
@@ -29,8 +28,8 @@ input {
   margin-right: 3px;
 }
 
-#emailstyle[type=email]:focus {
-  border: 4px solid #027BFF;
+#emailstyle[type="email"]:focus {
+  border: 4px solid #027bff;
 }
 
 #buttonstyle {
@@ -39,11 +38,10 @@ input {
   border-radius: 5px;
   color: white;
   width: 80%;
-
 }
 
 .secondLine {
-  background-color:  #bdbdbd;
+  background-color: #bdbdbd;
 }
 
 img {
@@ -58,8 +56,3 @@ img {
 /* ul {
   list-style-type: none;
 } */
-
-
-
-
-
