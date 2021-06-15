@@ -1,77 +1,61 @@
-import Parser from "html-react-parser";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Button, Row, Col, Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import Mainimage from "../components/Image";
 import MetaTags from "../components/MetaTags";
-import getFirebase from "../firebase";
-// import seoImage from "../pics/landing_img_small.jpg";
+import Posts from "../blogposts/Posts";
 import "./blog.css";
+import seoImage from "../pics/landing_img_small.jpg";
+import Parser from "html-react-parser";
+import styled from "styled-components";
 
 const ViewBlog = (props) => {
-  const [loading, setLoading] = useState(true);
-  const [post, setPost] = useState(null);
-
-  const ID = props.location.state;
+  // const [loading, setLoading] = useState(true);
+  const [filteredPost, setFilteredPost] = useState(null);
   let history = useHistory();
+  const postTitle = props.match.params.title.toLowerCase().trim();
 
-  if (loading) {
-    getFirebase()
-      .database()
-      .ref("/posts")
-      .orderByChild("id")
-      .equalTo(parseInt(ID))
-      .once("value", (snapshot) => {
-        var result = Object.values(snapshot.val());
-        setPost(result[0]);
-        setLoading(false);
-        <MetaTags
-          title={result[0].title}
-          img={result[0].coverImage}
-          description={result[0].overview}
-        />;
-      });
-  }
+  useEffect(() => {
+    setFilteredPost(
+      Posts.filter(
+        (y) => y.title.toLowerCase().trim().replace(/ /g, "-") == postTitle
+      )[0]
+    );
+  }, []);
 
   return (
     <React.Fragment>
-      {/* <MetaTags
-        title="BLOG - Nyolcág"
+      <MetaTags
+        title="Első blogpost"
         img={seoImage}
-        description="A Nyolcágú Jóga Alapítvány Blogja"
-      /> */}
+        description="Első blogpost"
+      />
       <Mainimage />
-      <Container className="blogwidth" id="mobil">
-        {loading ? (
-          <div>
-            <h3>Betöltés...</h3>
-          </div>
-        ) : (
-          <React.Fragment>
+      {filteredPost && (
+        <React.Fragment>
+          <Container className="blogwidth" id="mobil">
             <Row>
               <Col>
-                <h1>{post.title}</h1>
+                <h1>{filteredPost.title}</h1>
               </Col>
             </Row>
             <Row>
               <Col>
                 <h6>
-                  Közzétéve: <strong>{post.datePretty}</strong>
+                  Közzétéve: <strong>{filteredPost.date}</strong>
                 </h6>
               </Col>
             </Row>
             <Row>
               <Col>
-                <Image
-                  src={post.coverImage}
-                  alt={post.coverImageAlt}
-                  rounded
-                  fluid
-                />
+                <Image src={filteredPost.image} rounded fluid />
+                {/* <Mainimage /> */}
               </Col>
             </Row>
             <Row>
-              <Col>{Parser(post.content)}</Col>
+              <Col>
+                <PaddingP>{Parser(filteredPost.content)}</PaddingP>
+              </Col>
             </Row>
             <Row>
               <Col>
@@ -80,11 +64,16 @@ const ViewBlog = (props) => {
                 </Button>
               </Col>
             </Row>
-          </React.Fragment>
-        )}
-      </Container>
+          </Container>
+        </React.Fragment>
+      )}
     </React.Fragment>
   );
 };
+
+//Styled Components
+const PaddingP = styled.p`
+  text-align: justify;
+`;
 
 export default ViewBlog;

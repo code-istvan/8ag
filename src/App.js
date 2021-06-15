@@ -9,6 +9,7 @@ import Fooldal from "./pages/Fooldal";
 import EgySzazalek from "./pages/EgySzazalek";
 import Kapcsolat from "./pages/Kapcsolat";
 import Blog from "./pages/Blog";
+import BlogNew from "./pages/BlogNew";
 import BlogAuth from "./pages/BlogAuth";
 import Projekt from "./pages/Projekt";
 import Projektjeink from "./pages/Projektjeink";
@@ -37,9 +38,9 @@ const App = () => {
         <Route path="/projekt" component={Projekt}></Route>
         <Route path="/uvegzseb" component={Uvegzseb}></Route>
         <Route path="/kapcsolat" component={Kapcsolat}></Route>
-        <Route path="/blog" component={Blog}></Route>
+        <Route path="/blog" component={BlogNew}></Route>
         <Route path="/createblog" component={BlogAuth}></Route>
-        <Route path="/post/:id" component={ViewBlog}></Route>
+        <Route path="/post/:title" component={ViewBlog}></Route>
         <Route path="/adatvedelem" component={Adatvedelem}></Route>
         <Route component={NotFound}></Route>
       </Switch>
