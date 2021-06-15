@@ -43,7 +43,7 @@ const EgySzazalek = () => {
               nagyszerű tudomány. Ha az 1% százalékodat a Nyolcágú Jóga
               Alapítványnak működtetésére vagy projektjeinek támogatására
               kívánod felajánlani (lásd a
-              <Link href="/projektjeink">projektjeink</Link> menüpontban), a
+              <Link href="/projektjeink"> projektjeink</Link> menüpontban), a
               személyi jövedelemadó bevallásodban a Nyolcágú Jóga Alapítvány
               adószámát tüntesd fel.
             </PaddingP>
@@ -51,7 +51,7 @@ const EgySzazalek = () => {
         </Row>
         {/* <Row className="justify-content-md-center">
         <Col className="justify"> */}
-        <Row>
+        {/* <Row>
           <Col>
             <Alert variant="primary">
               <Alert.Heading>FONTOS INFORMÁCIÓ!</Alert.Heading>
@@ -72,7 +72,7 @@ const EgySzazalek = () => {
               </PaddingP>
             </Alert>
           </Col>
-        </Row>
+        </Row> */}
         <Row>
           <Col>
             <Card className="taxnumber">

@@ -166,7 +166,7 @@ const Projekt = () => {
                               <input
                                 type="text"
                                 placeholder="Ide írd a családneved*"
-                                name="csaladnév"
+                                name="csaladnev"
                                 className="InputMassage"
                                 onChange={inputClick3}
                                 required
@@ -177,7 +177,7 @@ const Projekt = () => {
                               <input
                                 type="text"
                                 placeholder="Ide írd a keresztneved*"
-                                name="keresztnév"
+                                name="keresztnev"
                                 className="InputMassage"
                                 onChange={inputClick3}
                                 required
@@ -201,7 +201,7 @@ const Projekt = () => {
                             <Col>
                               {" "}
                               <input
-                                type="number"
+                                type="text"
                                 placeholder="Irányítószám*"
                                 name="iranyito"
                                 pattern="[0-9]{4}"

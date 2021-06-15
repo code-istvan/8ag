@@ -18,6 +18,7 @@ import Uvegzseb from "./pages/Uvegzseb";
 import ReactGA from "react-ga";
 import NotFound from "./components/NotFound";
 import ViewBlog from "./pages/ViewBlog";
+import BlogTest from "./blogposts/Post1";
 // import RouteChangeTracker from './components/RouteChangeTracker';
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/createblog" component={BlogAuth}></Route>
         <Route path="/post/:title" component={ViewBlog}></Route>
         <Route path="/adatvedelem" component={Adatvedelem}></Route>
+        <Route path="/post1" component={BlogTest}></Route>
         <Route component={NotFound}></Route>
       </Switch>
       <Footer />
