@@ -25,21 +25,21 @@ const Fooldal = () => {
         <Row>
           <Col>
             <PaddingP>
-              Az Alapítvány célja, hogy a jóga elméletét és gyakorlatát minél
-              szélesebb körben és folyamatosan népszerűsítse Magyarországon. Az
-              Indiából eredeztethető jóga már évezredek óta segíti az embereket
-              a testi és lelki egészség elérésében és megőrzésében. Áldásos
-              hatásai ma már minden kétségen felül bizonyítottak, gyakorlóinak
-              nem csupán fizikai kondícióját és általános egészségi állapotát
-              javítja, hanem egy komplex hatásmechanizmus révén segíti őket
-              abban, hogy az élet többi területén is könnyen megállják a
-              helyüket, boldogan és kiegyensúlyozottan éljenek. Technikái
-              sikeresen beilleszthetők a mai, modern életvitelbe is. Számos
-              kiváló könyvet írtak a témában, amelyek jelentős része sajnos
-              magyar nyelven egyelőre nem hozzáférhető. Az Alapítvány a jóga
-              gyakorlati és elméleti-filozófiai ismeretanyaga népszerűsítésének
-              célkitűzését és abban való szerepvállalását az alábbi
-              tevékenységekkel, módokon és eszközökkel kívánja megvalósítani:
+              Alapítványunk célja, hogy a jóga elméletét és gyakorlatát minél
+              szélesebb körben népszerűsítse Magyarországon. Az Indiából
+              eredeztethető jóga már évezredek óta segíti az embereket a testi
+              és lelki egészség elérésében és megőrzésében. Áldásos hatásai ma
+              már minden kétségen felül bizonyítottak, gyakorlóinak nem csupán
+              fizikai kondícióját és általános egészségi állapotát javítja,
+              hanem egy komplex hatásmechanizmus révén segíti őket abban, hogy
+              az élet többi területén is könnyen megállják a helyüket, boldogan
+              és kiegyensúlyozottan éljenek. Technikái sikeresen beilleszthetők
+              a mai, modern életvitelbe is. Számos kiváló könyvet írtak a
+              témában, amelyek jelentős része sajnos magyar nyelven egyelőre nem
+              hozzáférhető. Az Alapítvány a jóga gyakorlati és
+              elméleti-filozófiai ismeretanyaga népszerűsítésének célkitűzését
+              és abban való szerepvállalását az alábbi tevékenységekkel, módokon
+              és eszközökkel kívánja megvalósítani:
             </PaddingP>
           </Col>
         </Row>

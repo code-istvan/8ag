@@ -201,7 +201,7 @@ const Projekt = () => {
                             <Col>
                               {" "}
                               <input
-                                type="number"
+                                type="text"
                                 placeholder="Irányítószám*"
                                 name="iranyito"
                                 pattern="[0-9]{4}"
