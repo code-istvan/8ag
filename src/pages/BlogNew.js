@@ -40,11 +40,10 @@ const BlogNew = () => {
               return (
                 <Col md={4} key={eachPost.id}>
                   <Card className="cardHover">
-                    {/* <Card.Img
+                    <Card.Img
                       variant="top"
-                      src={eachPost.coverImage}
-                    /> */}
-                    <Mainimage />
+                      src={eachPost.image}
+                    />
                     <Card.Body className="bodyColor">
                       <Card.Title>
                         <h5>{eachPost.title}</h5>
