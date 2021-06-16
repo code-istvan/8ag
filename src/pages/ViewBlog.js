@@ -25,14 +25,14 @@ const ViewBlog = (props) => {
 
   return (
     <React.Fragment>
-      <MetaTags
-        title={filteredPost.title}
-        img={filteredPost.image}
-        description={Parser(filteredPost.content)}
-      />
       <Mainimage />
       {filteredPost && (
         <React.Fragment>
+          <MetaTags
+            title={filteredPost.title}
+            img={filteredPost.image}
+            description={Parser(filteredPost.content)}
+          />
           <Container className="blogwidth" id="mobil">
             <Row>
               <Col>
