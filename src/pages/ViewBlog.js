@@ -26,9 +26,9 @@ const ViewBlog = (props) => {
   return (
     <React.Fragment>
       <MetaTags
-        title="Első blogpost"
-        img={seoImage}
-        description="Első blogpost"
+        title={filteredPost.title}
+        img={filteredPost.image}
+        description={Parser(filteredPost.content)}
       />
       <Mainimage />
       {filteredPost && (
@@ -49,7 +49,6 @@ const ViewBlog = (props) => {
             <Row>
               <Col>
                 <Image src={filteredPost.image} rounded fluid />
-                {/* <Mainimage /> */}
               </Col>
             </Row>
             <Row>
