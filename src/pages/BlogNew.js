@@ -20,6 +20,14 @@ const BlogNew = () => {
     setAllPosts(Posts);
   }, []);
 
+  const getPost = (postTitle) => {
+    let title = postTitle.toLowerCase().trim().replace(/ /g, "-");
+    let post = Posts.filter(
+      (y) => y.title.toLowerCase().trim().replace(/ /g, "-") == title
+    )[0];
+    history.push("/post/" + title, { post });
+  };
+
   return (
     <React.Fragment>
       <MetaTags
@@ -40,10 +48,7 @@ const BlogNew = () => {
               return (
                 <Col md={4} key={eachPost.id}>
                   <Card className="cardHover">
-                    <Card.Img
-                      variant="top"
-                      src={eachPost.image}
-                    />
+                    <Card.Img variant="top" src={eachPost.image} />
                     <Card.Body className="bodyColor">
                       <Card.Title>
                         <h5>{eachPost.title}</h5>
@@ -57,9 +62,7 @@ const BlogNew = () => {
                       <Card.Subtitle>
                         <Button
                           variant="primary"
-                          onClick={() =>
-                            history.push("/post/" + eachPost.title.replace(/ /g, "-"))
-                          }
+                          onClick={() => getPost(eachPost.title)}
                         >
                           Tovább a bejegyzésre
                         </Button>
