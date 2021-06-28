@@ -16,7 +16,9 @@ const ViewBlog = (props) => {
   let history = useHistory();
   //const postTitle = props.match.params.title.toLowerCase().trim();
   console.log(props.location.state.post);
-  const filteredPost = props.location.state.post ? props.location.state.post : null;
+  const filteredPost = props.location.state.post
+    ? props.location.state.post
+    : null;
   //setFilteredPost(props.location.state.post ? props.location.state.post : null);
   let desc = filteredPost && Parser(filteredPost.content);
 
@@ -26,11 +28,21 @@ const ViewBlog = (props) => {
         <Mainimage />
         {filteredPost && (
           <React.Fragment>
-            <MetaTags
+            {/* <MetaTags
               title={filteredPost.title}
               img={filteredPost.image}
               description={desc}
-            />
+            /> */}
+
+            <Helmet>
+              <title>{filteredPost.title}</title>
+              <meta property="og:title" content={filteredPost.title} />
+              <meta property="og:description" content={desc} />
+              <meta property="og:image" content={filteredPost.image} />
+              <meta property="og:url" content={window.location.origin} />
+              <meta property="og:type" content="object" />
+              <meta property="fb:app_id" content="1076431962839514" />
+            </Helmet>
             <Container className="blogwidth" id="mobil">
               <Row>
                 <Col>
