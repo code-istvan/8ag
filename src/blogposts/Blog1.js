@@ -4,9 +4,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
-import Link from "../components/StyledComponents/Link";
-import seoImage from "../pics/landing_img_small.jpg";
-import BlogPostPic1 from "../blogposts/pics/firstpostpic.jpg";
+// import Link from "../components/StyledComponents/Link";
+// import seoImage from "../pics/landing_img_small.jpg";
+// import BlogPostPic1 from "https://bandhaworks.hu/Files/firstpostpic.jpg";
 import MetaTags from "../components/MetaTags";
 // import "./adatvedelem.css";
 import Mainimage from "../components/Image";
@@ -16,7 +16,7 @@ const Blog1 = () => {
     <React.Fragment>
       <MetaTags
         title="Indul a blogunk - Nyolcág"
-        img={BlogPostPic1}
+        img="https://bandhaworks.hu/Files/firstpostpic.jpg"
         description="Indul a blogunk - Nyolcág"
       />
       <Mainimage />
@@ -27,7 +27,7 @@ const Blog1 = () => {
           </Col>
         </Row>
         <Row>
-          <img src={BlogPostPic1} />
+          <img src="https://bandhaworks.hu/Files/firstpostpic.jpg" />
         </Row>
 
         <Row>
