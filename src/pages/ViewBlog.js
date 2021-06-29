@@ -8,31 +8,40 @@ import "./blog.css";
 import seoImage from "../pics/landing_img_small.jpg";
 import Parser from "html-react-parser";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 
 const ViewBlog = (props) => {
   // const [loading, setLoading] = useState(true);
-  const [filteredPost, setFilteredPost] = useState(null);
+  //const [filteredPost, setFilteredPost] = useState(null);
   let history = useHistory();
-  const postTitle = props.match.params.title.toLowerCase().trim();
-
-  useEffect(() => {
-    setFilteredPost(
-      Posts.filter(
-        (y) => y.title.toLowerCase().trim().replace(/ /g, "-") == postTitle
-      )[0]
-    );
-  }, []);
+  //const postTitle = props.match.params.title.toLowerCase().trim();
+  console.log(props.location.state.post);
+  const filteredPost = props.location.state.post
+    ? props.location.state.post
+    : null;
+  //setFilteredPost(props.location.state.post ? props.location.state.post : null);
+  let desc = filteredPost && Parser(filteredPost.content);
 
   return (
     <React.Fragment>
-      <MetaTags
-        title={filteredPost.title}
-        img={filteredPost.image}
-        description={Parser(filteredPost.content)}
-      />
       <Mainimage />
       {filteredPost && (
         <React.Fragment>
+          {/* <MetaTags
+              title={filteredPost.title}
+              img={filteredPost.image}
+              description={desc}
+            /> */}
+
+          <Helmet>
+            <title>{filteredPost.title}</title>
+            <meta property="og:title" content={filteredPost.title} />
+            <meta property="og:description" content={desc} />
+            <meta property="og:image" content={filteredPost.image} />
+            <meta property="og:url" content={window.location.origin} />
+            <meta property="og:type" content="object" />
+            <meta property="fb:app_id" content="1076431962839514" />
+          </Helmet>
           <Container className="blogwidth" id="mobil">
             <Row>
               <Col>
@@ -53,7 +62,7 @@ const ViewBlog = (props) => {
             </Row>
             <Row>
               <Col>
-                <PaddingP>{Parser(filteredPost.content)}</PaddingP>
+                <PaddingP>{desc}</PaddingP>
               </Col>
             </Row>
             <Row>
