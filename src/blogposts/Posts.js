@@ -1,4 +1,4 @@
-import firstpostpic from "../blogposts/pics/firstpostpic.jpg";
+// import firstpostpic from "../blogposts/pics/firstpostpic.jpg";
 
 export default [
   {
