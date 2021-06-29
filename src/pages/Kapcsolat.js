@@ -7,7 +7,6 @@ import GoogleMap from "../components/GoogleMap";
 import ButtonInputStyle from "../components/StyledComponents/ButtonInputStyle";
 import ReactDOM from "react-dom";
 import "./Kapcsolat.css";
-import Checkbox from "../components/Checkbox";
 import Link from "../components/StyledComponents/Link";
 import seoImage from "../pics/landing_img_small.jpg";
 import MetaTags from "../components/MetaTags";
@@ -114,7 +113,6 @@ const Kapcsolat = () => {
               onChange={inputClick2}
               required
             />
-            <Checkbox checked={checked} onChange={handleCheckboxChange} />
           </Col>
         </Row>
         <Row>

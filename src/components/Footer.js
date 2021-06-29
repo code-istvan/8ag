@@ -133,7 +133,7 @@ const Footer = () => {
             <br />
             Oldaltérkép
             <br />
-            {/* <a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noreferrer">Freepik</a> által készített ikonok a <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">flaticon.com</a> oldalról */}
+            <Link href="/blogPostOne">Blog1</Link>
           </p>
         </Col>
       </Row>

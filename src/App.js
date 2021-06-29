@@ -14,6 +14,7 @@ import BlogAuth from "./pages/BlogAuth";
 import Projekt from "./pages/Projekt";
 import Projektjeink from "./pages/Projektjeink";
 import Adatvedelem from "./pages/Adatvedelem";
+import Blog1 from "./blogposts/Blog1";
 import Uvegzseb from "./pages/Uvegzseb";
 import ReactGA from "react-ga";
 import NotFound from "./components/NotFound";
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/createblog" component={BlogAuth}></Route>
         <Route path="/post/:title" component={ViewBlog}></Route>
         <Route path="/adatvedelem" component={Adatvedelem}></Route>
+        <Route path="/blogpostone" component={Blog1}></Route>
         <Route component={NotFound}></Route>
       </Switch>
       <Footer />
