@@ -17,7 +17,7 @@ const Blog1 = () => {
       <MetaTags
         title="Indul a blogunk - Nyolcág"
         img="https://bandhaworks.hu/Files/firstpostpic.jpg"
-        description="Indul a blogunk - Nyolcág"
+        description="Az alapítvány 2015-ös bejegyzése óta nem igazán volt..."
       />
       <Mainimage />
       <Container className="maincontainer">
