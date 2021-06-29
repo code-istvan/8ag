@@ -26,9 +26,9 @@ const Blog1 = () => {
             <h1>Indul a blogunk</h1>
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           <img src={BlogPostPic1} />
-        </Row>
+        </Row> */}
 
         <Row>
           <p>
