@@ -43,7 +43,7 @@ const App = () => {
         <Route path="/createblog" component={BlogAuth}></Route>
         <Route path="/post/:title" component={ViewBlog}></Route>
         <Route path="/adatvedelem" component={Adatvedelem}></Route>
-        <Route path="/blogpostone" component={Blog1}></Route>
+        <Route path="/indul-a-blogunk" component={Blog1}></Route>
         <Route component={NotFound}></Route>
       </Switch>
       <Footer />

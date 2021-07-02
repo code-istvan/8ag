@@ -9,7 +9,7 @@ const MetaTags = (props) => {
     name: props.title.toString(),
     url: window.location.origin.toString(),
     description: props.description.toString(),
-    image: baseUrl + props.img,
+    image: props.imageFlag ? props.img : baseUrl + props.img,
   };
 
   return (
@@ -18,8 +18,8 @@ const MetaTags = (props) => {
         <title>{props.title}</title>
         <meta property="og:title" content={props.title} />
         <meta property="og:description" content={props.description} />
-        <meta property="og:image" content={baseUrl + props.img} />
-        <meta property="og:url" content={window.location.origin} />
+        <meta property="og:image" content={props.imageFlag ? props.img : baseUrl + props.img} />
+        <meta property="og:url" content={baseUrl} />
         <meta property="og:type" content="object" />
         <meta property="fb:app_id" content="1076431962839514" />
       </Helmet>
