@@ -10,12 +10,26 @@ const Blog1 = () => {
   let history = useHistory();
   return (
     <React.Fragment>
-      <MetaTags
+      {/* <MetaTags
         imageFlag={true}
         title="Indul a blogunk - Nyolcág"
         img={img}
         description="Az alapítvány 2015-ös bejegyzése óta nem igazán volt..."
-      />
+      /> */}
+      <Helmet>
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nyolcag.hu/indul-a-blogunk" />
+        <meta property="og:title" content="Indul a blogunk - Nyolcág" />
+        <meta
+          property="og:description"
+          content="Az alapítvány 2015-ös bejegyzése óta nem igazán volt időnk foglalkozni a szervezettel és annak céljaival, annak ellenére, hogy nagyon szerettük volna."
+        />
+        <meta property="og:image" content={img} />
+        <meta
+          name="description"
+          content="Az alapítvány 2015-ös bejegyzése óta nem igazán volt időnk foglalkozni a szervezettel és annak céljaival, annak ellenére, hogy nagyon szerettük volna."
+        />
+      </Helmet>
       <Mainimage />
       <Container className="maincontainer">
         <Row>
