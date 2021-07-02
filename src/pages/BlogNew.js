@@ -1,33 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import seoImage from "../pics/landing_img_small.jpg";
 import MetaTags from "../components/MetaTags";
 import Mainimage from "../components/Image";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import Parser from "html-react-parser";
-import Posts from "../blogposts/Posts";
+import img from "../blogposts/pics/firstpostpic.jpg";
+import { Container, Button, Row, Col, Image, Card } from "react-bootstrap";
 import "./blog.css";
 
 const BlogNew = () => {
-  const [allPosts, setAllPosts] = useState([]);
-  let history = useHistory();
-
-  useEffect(() => {
-    setAllPosts(Posts);
-  }, []);
-
-  const getPost = (postTitle) => {
-    let title = postTitle.toLowerCase().trim().replace(/ /g, "-");
-    let post = Posts.filter(
-      (y) => y.title.toLowerCase().trim().replace(/ /g, "-") == title
-    )[0];
-    history.push("/post/" + title, { post });
-  };
-
   return (
     <React.Fragment>
       <MetaTags
@@ -36,45 +16,49 @@ const BlogNew = () => {
         description="A Nyolcágú Jóga Alapítvány Blogja"
       />
       <Mainimage />
-      <Container className="maincontainer">
-        <Row>
-          <Col>
-            <h1>BLOG</h1>
-          </Col>
-        </Row>
-        <Row>
-          {allPosts.length &&
-            allPosts.map((eachPost) => {
-              return (
-                <Col md={4} key={eachPost.id}>
-                  <Card className="cardHover">
-                    <Card.Img variant="top" src={eachPost.image} />
-                    <Card.Body className="bodyColor">
-                      <Card.Title>
-                        <h5>{eachPost.title}</h5>
-                      </Card.Title>
-                      <Card.Text>
-                        <span className="content">
-                          {Parser(eachPost.content)}
-                        </span>
-                      </Card.Text>
-                      <Card.Text>{eachPost.date}</Card.Text>
-                      <Card.Subtitle>
-                        <Button
-                          variant="primary"
-                          onClick={() => getPost(eachPost.title)}
-                        >
-                          Tovább a bejegyzésre
-                        </Button>
-                      </Card.Subtitle>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              );
-            })}
-        </Row>
-      </Container>
+      <BlogOne />
     </React.Fragment>
+  );
+};
+
+const BlogOne = () => {
+  let history = useHistory();
+  return (
+    <Container className="maincontainer">
+      <Row>
+        <Col>
+          <h1>BLOG</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={4}>
+          <Card className="cardHover">
+            <Card.Img variant="top" src={img} />
+            <Card.Body className="bodyColor">
+              <Card.Title>
+                <h5>Indul a blogunk - Nyolcág</h5>
+              </Card.Title>
+              <Card.Text>
+                <span className="content">
+                  Az alapítvány 2015-ös bejegyzése óta nem igazán volt időnk
+                  foglalkozni a szervezettel és annak céljaival, annak ellenére,
+                  hogy nagyon szerettük volna.
+                </span>
+              </Card.Text>
+              <Card.Text>July 1 2021</Card.Text>
+              <Card.Subtitle>
+                <Button
+                  variant="primary"
+                  onClick={() => history.push("/indul-a-blogunk")}
+                >
+                  Tovább a bejegyzésre
+                </Button>
+              </Card.Subtitle>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
