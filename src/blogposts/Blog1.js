@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import img from "./pics/firstpostpic.jpg";
+import { Helmet } from "react-helmet";
 import MetaTags from "../components/MetaTags";
 import { Container, Button, Row, Col, Image } from "react-bootstrap";
 import Mainimage from "../components/Image";
